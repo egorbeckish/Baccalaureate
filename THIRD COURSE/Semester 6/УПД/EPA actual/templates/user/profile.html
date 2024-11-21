@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+	<body>
+		<div class="title_">
+			<nav>
+				<a href="/services">Услуги</a>
+				<a href="/admin_call">Связь с Администратором</a>
+				<a href="/logout">Выйти из ЛК</a>
+				<a href="/">Вернуться на главную</a>
+			</nav>
+		</div>
+
+		<div class="service">
+			<nav>
+				<a href="/show_service">Просмотр действующих услуг</a>
+			</nav>
+		</div>
+
+		<div class="information">
+			<div class="info_profile">
+				<p class="title_profile">Информация профиля</p>
+				<p class="welcome">Приветствуем вас, {{ full_name }}</p>
+				
+				<form method="POST" action="/update_profile">
+					{% for key, value in data.items() %}
+						{% if flag %}
+							<div class="info_user">
+								<span>{{ key }}</span>
+								<input type="text" name="{{ key }}" value="{{ value }}" placeholder="Введите новые данные" required>
+							</div>
+						{% else %}
+							<div class="info_user">
+								<span>{{ key }}</span>
+								<input type="text" name="{{ key }}" placeholder="{{ value }}" readonly>
+							</div>
+						{% endif %}
+					{% endfor %}
+
+					{% if flag %}
+						<div class="button">
+							<input type="submit" value="Сохранить">
+							<input type="submit" onclick="location.href='/profile'" value="Отмена">
+						</div>
+					{% endif %}
+				</form>
+				
+				{% if not flag %}
+					<div class="button">
+						<input type="submit" onclick="location.href='/update_profile'" value="Изменить">
+					</div>
+				{% endif %}
+			</div>
+			
+
+			<div class="info_home">
+				<p class="title_home">Информация о квартирах</p>
+
+				<div class="home_space">
+					{% for i in range(n) %}
+						<form method="POST" action="/update_home">
+							<div class="home_info">
+								{% for key in list_home %}
+									{% if flag_home %}
+										<div class="home_item">
+											<span>{{ key }}</span>
+											<input type="text" name="{{ key }}" value="{{ home[i][loop.index] }}" placeholder="Введите {{ key.lower() }}" required>
+										</div>
+									{% else %}
+										<div class="home_item">
+											<span>{{ key }}</span>
+											<input type="text" value="{{ home[i][loop.index] }}" placeholder="Введите {{ key.lower() }}" readonly>
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+							{% if flag_home %}
+								<div class="button">
+									<button type="submit" name="button" value="{{ home[i][0] }}">Обновить</button>
+								</div>
+							{% endif %}
+						</form>
+					{% endfor %}
+				</div>
+
+				{% if flag_home %}
+					<div class="delete">
+						{% for i in range(n) %}
+							<div class="button_del">
+								<form method='POST' action="/delete_home">
+									<button type="submit" name="number" value="{{ home[i][0] }}">Удалить</button>
+								</form>
+							</div>
+						{% endfor %}
+					</div>
+
+					<div class="button">
+						<input type="submit" onclick="location.href='/profile'" value="Отмена">
+					</div>
+				{% else %}
+					<div class="button_off">
+						<input type="submit" onclick="location.href='/insert_home'" value="Добавить">
+						<input type="submit" onclick="location.href='/update_home'" value="Изменить">
+					</div>
+				{% endif %}
+
+			</div>
+		</div>
+	</body>
+
+	<link href="{{ url_for('static', filename='user/profile_.css')}}" rel="stylesheet" />
+</html>

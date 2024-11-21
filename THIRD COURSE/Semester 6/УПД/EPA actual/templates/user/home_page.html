@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+	<body>
+		{% if 'AUTH_STATUS' in auth_status %}
+			{% if status == 'Работник' %}
+				<div class="work">
+					<nav>
+						<a href="/employee/">Просмотр услуг</a>
+						<a href="/logout">Выйти из ЛК</a>
+					</nav>
+				</div>
+			{% elif status == 'Администратор' %}
+				<div class="work">
+					<nav>
+						<a href="/admin/">Просмотр услуг</a>
+						<a href="/logout">Выйти из ЛК</a>
+					</nav>
+				</div>
+			{% else %}
+				<nav>
+					<a href="/services">Услуги</a>
+					<a href="/admin_call">Связь с Администратором</a>
+					<a href="/profile">Личный профиль</a>
+					<a href="/logout">Выйти из ЛК</a>
+				</nav>
+			{% endif %}
+			<!--<nav>
+				<a href="/services">Услуги</a>
+				<a href="/admin_call">Связь с Администратором</a>
+				<a href="/profile">Личный профиль</a>
+				<a href="/logout">Выйти из ЛК</a>
+			</nav>-->
+		{% else %}
+			<nav>
+				<a href="/services">Услуги</a>
+				<a href="/admin_call">Связь с Администратором</a>
+				<a href="/registration">Регистрация</a>
+				<a href="/authorization">Вход в ЛК</a>
+			</nav>
+		{% endif %}
+	</body>
+
+	<link href="{{ url_for('static', filename='user/home_page.css')}}" rel="stylesheet" />
+</html>

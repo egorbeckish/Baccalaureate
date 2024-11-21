@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+body {
+	height: 100vh;
+	padding: 10px;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+nav {
+	background: white;
+	width: 720px;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	border-radius: 22px;
+	box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.3);
+	position: relative;
+	margin: 0 auto;
+}
+
+nav > a {
+	color: black;
+	text-decoration: none;
+	padding: 16px 16px;
+	border-radius: 22px;
+}
+
+nav > a:hover {
+	transition: 0.25s;
+	background: rgb(64, 211, 27);
+	color: white;
+}
+
+.service {
+	width: 70%;
+	height: 80%;
+
+	background-color: white;
+
+	position: relative;
+	margin: 0 auto;
+
+	top: 10%;
+
+	.welcome {
+		text-align: center;
+		font-size: 35px;
+		padding-top: 30px;
+	}
+
+	.welcome::before {
+		content: "";
+		overflow: auto;
+		margin: auto;
+		position: absolute;
+		top: 70px; 
+		left: 0; 
+		right: 0;
+		
+		width: 215px;
+		height: 3px;
+		border-radius: 2px;
+	
+		text-align: center;
+		background: linear-gradient(135deg, #71b7e6, #9b59b6);	
+	}
+
+	form {
+
+		.determine {
+			display: flex;
+			justify-content: space-around;
+			margin-top: 50px;
+
+
+			.title_service {
+				padding-left: 190px;
+				font-size: 20px;
+			}
+
+			select {
+				margin-right: 140px;
+				font-size: 15px;
+				width: 27%;
+			}
+		}
+
+		.info_service {
+			display: flex;
+			justify-content: space-between;
+
+			.comment {
+				display: flex;
+				margin-left: 50px;
+				
+
+				height: 300px;
+
+				margin-top: 5vh;
+				textarea {
+					resize: none;
+					width: 70vh;
+				}
+			}
+
+			
+			.data {
+				
+				.data-item {
+					margin-top: 90px;
+
+					p {
+						position: absolute;
+						margin-left: -130px;
+					}
+
+					input {
+						margin-right: 80px;
+					}
+
+					
+				}
+			}
+		}
+
+		.button {
+			text-align: center;
+			max-height: 100%;
+			max-width: 100%;
+			margin-top: 3vh;
+		}
+		
+		.button input {
+			height: 4vh;
+			width: 15%;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+		
+		.button input:hover {
+			background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+		}
+	}
+}

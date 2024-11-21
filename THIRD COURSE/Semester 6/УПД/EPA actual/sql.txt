@@ -1,0 +1,278 @@
+create table if not exists users (
+	uuid text not null primary key,
+	login text unique not null,
+	password text not null,
+	name text not null,
+	surname text not null,
+	thurname text not null,
+	phone_number text unique not null,
+	status text default 'Квартиросъемщик' not null
+)
+;
+
+
+create table if not exists home (
+	uuid text not null references users(uuid),
+	number int not null,
+	region text not null,
+	city text not null,
+	street text not null,
+	home_number text not null,
+	floor_number text not null,
+	entrance_number text not null
+)
+;
+
+
+create table if not exists services (
+	uuid text not null references users(uuid),
+	service text not null,
+	comment text not null,
+	date text not null,
+	time text not null,
+	employee text default 'Назначается' not null,
+	status text default 'Ожидание' not null
+)
+;
+
+create table if not exists employees (
+	uuid text null references users(uuid),
+	name text not null,
+	surname text not null,
+	thurname text not null,
+	status text null,
+	profession text not null
+)
+;
+
+
+
+
+insert into users
+values (
+	'd549dee0-f90a-49d5-85bc-5eeba065e6bf',
+	'ivan',
+	'123',
+	'Иван',
+	'Иванович',
+	'Иванов',
+	'0',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'189130af-0e5d-4a8b-a676-07e2288e365b',
+	'mihail',
+	'123',
+	'Михаил',
+	'Михайлович',
+	'Михалов',
+	'1',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'c5265697-b5ad-44e4-aac7-498011cb0b71',
+	'fedor',
+	'123',
+	'Федор',
+	'Федорович',
+	'Федоров',
+	'2',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'fb9888cb-426e-4fc2-b1ea-c1869b7b995b',
+	'egor',
+	'123',
+	'Егор',
+	'Егорович',
+	'Егоров',
+	'3',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'ba885d2a-eeac-4ab1-874d-4263c5e56e5c',
+	'alexey',
+	'123',
+	'Алексей',
+	'Алексеевич',
+	'Алексеев',
+	'4',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'd26d5a19-75c4-462a-b1a2-f2a482d02802',
+	'andrey',
+	'123',
+	'Андрей',
+	'Андреевич',
+	'Андреев',
+	'5',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'7cc4c918-f1d1-4baa-be4f-4cafc28c5091',
+	'roma',
+	'123',
+	'Роман',
+	'Романович',
+	'Романов',
+	'6',
+	'Работник'
+)
+;
+
+insert into users
+values (
+	'bacb37cd-62e1-46c4-8b67-77f98b6b5b3d',
+	'max',
+	'123',
+	'Максим',
+	'Максимович',
+	'Максимов',
+	'7',
+	'Работник'
+)
+;
+
+
+insert into users
+values (
+	'ee7288c1-941a-4eeb-b35c-132ac71adaaf',
+	'ira',
+	'123',
+	'Ирина',
+	'Андреевна',
+	'Иванова',
+	'8',
+	'Администратор'
+)
+;
+
+
+
+
+
+
+
+insert into employees
+values (
+	'd549dee0-f90a-49d5-85bc-5eeba065e6bf',
+	'Иван',
+	'Иванович',
+	'Иванов',
+	'Работник',
+	'Пломбировщик'
+)
+;
+
+insert into employees
+values (
+	'189130af-0e5d-4a8b-a676-07e2288e365b',
+	'Михаил',
+	'Михайлович',
+	'Михалов',
+	'Работник',
+	'Пломбировщик'
+)
+;
+
+insert into employees
+values (
+	'c5265697-b5ad-44e4-aac7-498011cb0b71',
+	'Федор',
+	'Федорович',
+	'Федоров',
+	'Работник',
+	'Уборщик'
+)
+;
+
+insert into employees
+values (
+	'fb9888cb-426e-4fc2-b1ea-c1869b7b995b',
+	'Егор',
+	'Егорович',
+	'Егоров',
+	'Работник',
+	'Уборщик'
+)
+;
+
+insert into employees
+values (
+	'ba885d2a-eeac-4ab1-874d-4263c5e56e5c',
+	'Алексей',
+	'Алексеевич',
+	'Алексеев',
+	'Работник',
+	'Плотник'
+)
+;
+
+insert into employees
+values (
+	'd26d5a19-75c4-462a-b1a2-f2a482d02802',
+	'Андрей',
+	'Андреевич',
+	'Андреев',
+	'Работник',
+	'Плотник'
+)
+;
+
+insert into employees
+values (
+	'7cc4c918-f1d1-4baa-be4f-4cafc28c5091',
+	'Роман',
+	'Романович',
+	'Романов',
+	'Работник',
+	'Инженер'
+)
+;
+
+insert into employees
+values (
+	'bacb37cd-62e1-46c4-8b67-77f98b6b5b3d',
+	'Максим',
+	'Максимович',
+	'Максимов',
+	'Работник',
+	'Инженер'
+)
+;
+
+
+insert into employees
+values (
+	'ee7288c1-941a-4eeb-b35c-132ac71adaaf',
+	'Ирина',
+	'Андреевна',
+	'Иванова',
+	'Администратор',
+	'Менеджер'
+)
+;
+
+drop table home;
+drop table services;
+drop table employees;
+drop table users;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+<body>
+	<nav>
+		<a href="/admin_call">Связь с Администратором</a>
+		<a href="/services">Услуги</a>
+		<a href="/registration">Регистрация</a>
+		<a href="/">Вернуться на главную</a>
+	</nav>
+	<div class="container">
+		<div class="title">Вход в систему</div>
+			<div class="content">
+				<form method="POST">
+					<div class="user-details">
+						<div class="input-box">
+							<span class="details">Логин</span>
+							<input type="text" name="login" placeholder="Введите логин" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Пароль</span>
+							<input type="text" name="password" placeholder="Введите пароль" required>
+						</div>
+					</div>
+
+					<div class="button">
+						<input type="submit" value="Войти">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+	<link href="{{ url_for('static', filename='user/auth.css')}}" rel="stylesheet" />
+</html>

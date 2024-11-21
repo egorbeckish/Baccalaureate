@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/profile">Вернуться в ЛК</a>
+			<a href="/services">Оформить услуги</a>
+			<a href="/admin_call">Связь с Администратором</a>
+			<a href="/">Вернуться на главную</a>
+		</nav>
+
+		<div class="services">
+			{% if flag %}
+				{% for i in range(info|length) %}
+					<div class="service">
+						{% for j in range(name|length) %}
+							<div class="info">
+								{{ name[j] }} {{info[i][j]}}
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			{% else %}
+				<h2>Услиги пока не оформлены</h2>
+			{% endif %}
+		</div>
+
+
+	<link href="{{ url_for('static', filename='user/show_service.css')}}" rel="stylesheet" />
+</html>

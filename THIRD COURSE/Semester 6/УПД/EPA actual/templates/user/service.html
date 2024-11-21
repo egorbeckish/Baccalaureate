@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+	<body>
+		{% if 'AUTH_STATUS' in auth_status %}
+			<nav>
+				<a href="/profile">Личный профиль</a>
+				<a href="/admin_call">Связь с Администратором</a>
+				<a href="/logout">Выйти из ЛК</a>
+				<a href="/">Вернуться на главную</a>
+			</nav>
+		{% else %}
+			<nav>
+				<a href="/admin_call">Связь с Администратором</a>
+				<a href="/registration">Регистрация</a>
+				<a href="/authorization">Вход в ЛК</a>
+				<a href="/">Вернуться на главную</a>
+			</nav>
+		{% endif %}
+
+		<div class="service">
+			<p class="welcome">Услуги ЖКХ</p>
+			<form method="POST" action="/services">
+				<div class="determine">
+					<p class="title_service">Услуга</p>
+					<select name="select_service">
+						<option>Выберите услугу</option>
+						{% for value in list_service %}
+							<option value="{{ value }}">{{ value }}</option>
+						{% endfor %}
+					</select>
+				</div>
+
+				<div class="info_service">
+					<div class="comment">
+						<textarea name="comment" placeholder="Введите дополнительную информацию для работника..."></textarea>
+					</div>
+					
+					<div class="data">
+						<div class="data-item">
+							<p>Дата</p>
+							<input type="date" id="date" name="date">
+						</div>
+						<div class="data-item">
+							<p>Время</p>
+							<input type="time" id="time" name="time">
+						</div>
+					</div>
+				</div>
+	
+				<div class="button">
+					<input type="submit" value="Отправить">
+				</div>
+			</form>
+		</div>
+	</body>
+
+	<link href="{{ url_for('static', filename='user/service.css')}}" rel="stylesheet" />
+</html>

@@ -1,0 +1,334 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+body{
+	height: 100vh;
+	padding: 10px;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.title_ nav {
+	background: white;
+	width: 660px;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	border-radius: 22px;
+	box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.3);
+	position: relative;
+	margin: 0 auto;
+}
+
+.title_ nav > a {
+	color: black;
+	text-decoration: none;
+	padding: 16px 16px;
+	border-radius: 22px;
+}
+
+.title_ nav > a:hover {
+	transition: 0.25s;
+	background: rgb(64, 211, 27);
+	color: white;
+}
+
+.service nav {
+	background: white;
+	width: 265px;
+	display: flex;
+	padding: 5px;
+	border-radius: 22px;
+	box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.3);
+	position: relative;
+	left: 80%;
+	bottom: 60px;
+}
+
+.service nav > a {
+	color: black;
+	text-decoration: none;
+	padding: 16px 16px;
+	border-radius: 22px;
+}
+
+.service nav > a:hover {
+	transition: 0.25s;
+	background: rgb(64, 211, 27);
+	color: white;
+}
+
+
+.information {
+	display: flex;
+	justify-content: space-between;
+
+	.welcome {
+		display: block;
+		font-size: x-large;
+		margin: 30px 0 70px 40px;
+	}
+
+	.info_profile {
+		width: 45%;
+		height: 80vh;
+		object-fit: cover;
+		object-position: bottom;
+	
+		margin: 67px 0 0 40px;
+	
+		background-color: #fff;
+		border-radius: 20px;
+
+		.title_profile {
+			text-align: center;
+			position: relative;
+			margin: 60px 0 0 0;
+		
+			font-size: 30px;
+		}
+
+		.title_profile::before {
+			content: "";
+			position: absolute;
+			
+			width: 340px;
+			height: 3px;
+			border-radius: 2px;
+		
+			margin: 30px -11.5px;
+			background: linear-gradient(135deg, #71b7e6, #9b59b6);	
+		}
+
+		.info_user {
+			position: relative;
+			text-align: center;
+			margin-top: 60px;
+		}
+
+		.info_user span {
+			position: absolute;
+			margin: 0 0 0 -60px;
+		}
+
+		.info_user input {
+			margin: -10px 0 0 100px;
+
+			width: 250px;
+			height: 40px;
+
+			outline: none;
+			font-size: 16px;
+			border-radius: 5px;
+			padding-left: 20px;
+		}
+
+		.info_user input:focus {
+			border-color: #9b59b6;
+		}
+
+		.button {
+			text-align: center;
+			max-height: 100%;
+			max-width: 100%;
+			margin-top: 15vh;
+		}
+		
+		.button input {
+			height: 4vh;
+			width: 20%;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+		
+		.button input:hover {
+			background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+		}
+	}
+
+
+	.info_home {
+		width: 45%;
+		height: 80vh;
+		object-fit: cover;
+		object-position: bottom;
+
+		margin: 67px 40px 0 0;
+
+		background-color: #fff;
+		border-radius: 20px;
+
+		.title_home {
+			text-align: center;
+			margin: 60px 0 30px 0;
+		
+			font-size: 30px;
+		}
+
+		.title_home::before {
+			content: "";
+			position: absolute;
+		
+			margin: 30px -13px;
+			width: 380px;
+			height: 3px;
+		
+			background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+
+		.home_space {
+			display: flex;
+			justify-content: space-around;
+
+			/*display: flex;*/
+			.home_info {
+				/*flex: 1;*/
+				margin-left: 100px;
+			}
+
+			.home_info .home_item {
+				max-width: 60%;
+				text-align: center;
+				margin-top: 10px;
+			}
+
+			.home_info .home_item input {
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+				outline: none;
+				border-radius: 5px;
+				padding: 5px;
+			}
+
+			.home_info .home_item input:focus {
+				border-color: #9b59b6;
+			}
+
+			.home_info .home_item span {
+				margin-top: 10px;
+			}
+
+			form {
+				.button {
+					/*text-align: center;*/
+					max-height: 100%;
+					max-width: 100%;
+					margin-top: 1vh;
+					margin-right: 15vh;
+				}
+				
+				.button button {
+					height: 4vh;
+					width: 45%;
+					border-radius: 5px;
+					border: none;
+					color: #fff;
+					font-size: 14px;
+					font-weight: 300;
+					letter-spacing: 1px;
+					cursor: pointer;
+					transition: all 0.3s ease;
+					background: linear-gradient(135deg, #71b7e6, #9b59b6);
+				}
+				
+				.button button:hover {
+					background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+				}
+
+			}
+		}
+
+		.button {
+			text-align: center;
+			max-height: 100%;
+			max-width: 100%;
+			margin-top: 1vh;
+		}
+		
+		.button input {
+			height: 4vh;
+			width: 20%;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+		
+		.button input:hover {
+			background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+		}
+
+		.button_off {
+			text-align: center;
+			max-height: 100%;
+			max-width: 100%;
+			margin-top: 10vh;
+		}
+		
+		.button_off input {
+			height: 4vh;
+			width: 20%;
+			border-radius: 5px;
+			border: none;
+			color: #fff;
+			font-size: 18px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: linear-gradient(135deg, #71b7e6, #9b59b6);
+		}
+		
+		.button_off input:hover {
+			background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+		}
+		
+		.delete {
+			display: flex;
+			justify-content: space-around;
+
+			.button_del {
+				position: relative;
+				left: 60px;
+				bottom: 30px;
+			}
+
+			.button_del button {
+				height: 4vh;
+				padding-left: 20px;
+				padding-right: 20px;
+				
+				border-radius: 5px;
+				border: none;
+				color: #fff;
+				font-size: 14px;
+				font-weight: 300;
+				letter-spacing: 1px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				background: linear-gradient(135deg, #71b7e6, #9b59b6);
+			}
+
+			.button_del button:hover {
+				background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+			} 
+		}
+	}
+}

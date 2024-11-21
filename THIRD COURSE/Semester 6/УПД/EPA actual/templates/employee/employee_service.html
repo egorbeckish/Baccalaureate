@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/">Вернуться на главную</a>
+		</nav>
+
+		<div class="services">
+			{% if flag %}
+				<form method="POST">
+					{% for i in range(info|length) %}
+						<div class="service">
+							{% for j in range(name|length) %}
+								{% if 'Статус' in name[j] and info[i][j + 1] != 'Выполнено' %}
+									<div class="info">
+										<label name="123">{{ name[j] }}</label>
+										<select name="{{info[i][0]}}">
+											<option>{{info[i][j + 1]}}</option>
+											{% for value in list_status %}
+												<option>{{ value }}</option>
+											{% endfor %}
+										</select>
+									</div>
+								{% else %}
+									<div class="info">
+										{{ name[j] }} {{info[i][j + 1]}}
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					{% endfor %}
+					
+					<div class="button">
+						<button type="submit">Сохранить</button>
+					</div>
+				</form>
+			{% else %}
+				<h2>Услуги пока не оформлены</h2>
+			{% endif %}
+		</div>
+
+
+	<link href="{{ url_for('static', filename='user/admin_service.css')}}" rel="stylesheet" />
+</html>

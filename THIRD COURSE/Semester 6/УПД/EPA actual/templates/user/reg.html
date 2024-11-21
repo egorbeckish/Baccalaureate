@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+<body>
+	<nav>
+		<a href="/admin_call">Связь с Администратором</a>
+		<a href="/services">Услуги</a>
+		<a href="/authorization">Вход в ЛК</a>
+		<a href="/">Вернуться на главную</a>
+	</nav>
+	<div class="container">
+		<div class="title">Регистрация</div>
+			<div class="content">
+				<form method="POST">
+					<div class="user-details">
+						<div class="input-box">
+							<span class="details">Имя</span>
+							<input type="text" name="name" placeholder="Введите своё имя" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Регион</span>
+							<input type="text" name="region" placeholder="Введите регион проживания" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Фамилия</span>
+							<input type="text" name="surname" placeholder="Введите свою фамилию" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Город</span>
+							<input type="text" name="city" placeholder="Введите город проживания" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Отчество</span>
+							<input type="text" name="thurname" placeholder="Введите своё отчество" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Улица</span>
+							<input type="text" name="street" placeholder="Введите улицу проживания" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Логин</span>
+							<input type="text" name="login" placeholder="Придумайте логин" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Номер дома</span>
+							<input type="text" name="home_number" placeholder="Введите номер дома" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Пароль</span>
+							<input type="text" name="password" placeholder="Придумайте пароль" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Номер квартиры</span>
+							<input type="text" name="floor_number" placeholder="Введите номер квартиры" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Номер телефона</span>
+							<input type="text" name="phone_number" placeholder="Введите номер телефона" required>
+						</div>
+						<div class="input-box">
+							<span class="details">Номер подъезда</span>
+							<input type="text" name="entrance_number" placeholder="Введите номер подъезда" required>
+						</div>
+					</div>
+
+					<div class="button">
+						<input type="submit" value="Зарегистрироваться">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+
+	<link href="{{ url_for('static', filename='user/reg.css')}}" rel="stylesheet" />
+</html>

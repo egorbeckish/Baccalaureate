@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ЖКХ
+		</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/services">Услуги</a>
+			<a href="/admin_call">Связь с Администратором</a>
+			<a href="/logout">Выйти из ЛК</a>
+			<a href="/profile">Вернуться в ЛК</a>
+		</nav>
+
+		<div class="container">
+			{% if update_status %}
+				<div class="title">Обновление квартиры №{{data[0]}}</div>
+			{% else %}
+				<div class="title">Новая квартира</div>
+			{% endif %}
+				<div class="content">
+					<form method="POST">
+						<div class="user-details">
+							{% for col in list_home %}
+								<div class="input-box">
+									<span class="details">{{ col }}</span>
+									{% if update_status %}
+										<input type="text" name="{{ col }}" value="{{ data[loop.index] }}" placeholder="Введите {{ col.lower() }}" required>
+									{% else %}
+										<input type="text" name="{{ col }}" placeholder="Введите {{ col.lower() }}" required>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+						
+						{% if update_status %}
+							<div class="button">
+								<input type="submit" value="Обновить">
+							</div>
+						{% else %}
+							<div class="button">
+								<input type="submit" value="Добавить">
+							</div>
+						{% endif %}
+					</form>
+				</div>
+			</div>
+		</body>
+
+	</body>
+
+	<link href="{{ url_for('static', filename='user/home.css')}}" rel="stylesheet" />
+</html>

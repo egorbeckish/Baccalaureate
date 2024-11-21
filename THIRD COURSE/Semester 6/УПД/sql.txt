@@ -1,0 +1,28 @@
+create table if not exists users (
+uuid text not null,
+login text unique not null primary key,
+password text not null,
+name text not null,
+surname text not null,
+thurname text not null,
+phone_number text not null unique
+)
+;
+
+create table home (
+number int,
+login varchar(100) references users(login),
+region varchar(100),
+city varchar(100),
+street varchar(100),
+home varchar(100),
+flat varchar(100),
+entrance varchar(100)
+)
+;
+
+alter sequence users_id_seq restart with 1;
+
+
+select * from users;
+select * from home;

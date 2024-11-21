@@ -1,0 +1,541 @@
+[DATA --- 18/05/24][TIME --- 10:30:17][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирон.
+[DATA --- 18/05/24][TIME --- 10:31:13][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 10:33:35][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 18/05/24][TIME --- 10:33:35][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 10:36:41][STATUS --- ERROR]       ->     Возникли трудности при авторизации.
+																		Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: auth
+																		в строке: 74 -> error_msg=error
+[DATA --- 18/05/24][TIME --- 10:37:20][STATUS --- ERROR]       ->     Пользователь egorka авторизировался.
+[DATA --- 18/05/24][TIME --- 10:38:16][STATUS --- WARNING]     ->     Данный пользователь с login: egorka1 не существует. Введите логин еще раз.
+[DATA --- 18/05/24][TIME --- 10:38:29][STATUS --- WARNING]     ->     Данный пользователь с login: egorka уже существует.
+[DATA --- 18/05/24][TIME --- 11:36:58][STATUS --- WARNING]     ->     Данный пользователь с login: egorka1 не существует. Введите логин еще раз.
+[DATA --- 18/05/24][TIME --- 11:37:08][STATUS --- WARNING]     ->     Данный пользователь с login: egorka1 не существует. Введите логин еще раз.
+[DATA --- 18/05/24][TIME --- 11:37:17][STATUS --- WARNING]     ->     Данный пользователь с login: egorka1 не существует. Введите логин еще раз.
+[DATA --- 18/05/24][TIME --- 13:22:40][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 13:23:18][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 13:27:36][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 13:28:24][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 13:40:17][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 13:40:55][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 13:41:03][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 13:42:18][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 13:57:40][STATUS --- WARNING]     ->     Данный пользователь с login: egorka не существует. Введите логин еще раз.
+[DATA --- 18/05/24][TIME --- 14:02:24][STATUS --- ERROR]       ->     Возникли трудности при регистрации.
+																		Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: write_logs
+																		в строке: 73 -> status = f'[STATUS --- {dict_error_logs[type_status]}]'
+[DATA --- 18/05/24][TIME --- 14:03:55][STATUS --- ERROR]       ->     При регистрации данные не добавились в БД.
+																		Обратитесь к файлу: structures.py
+																		в функции/переменной или т.п.: __getitem__
+																		в строке: 192 -> raise exceptions.BadRequestKeyError(key)
+[DATA --- 18/05/24][TIME --- 14:03:55][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 14:05:24][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 14:08:36][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 18/05/24][TIME --- 14:08:36][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 14:10:56][STATUS --- WARNING]     ->     Данный пользователь с login: egorka уже существует.
+[DATA --- 18/05/24][TIME --- 14:11:33][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 18/05/24][TIME --- 14:11:33][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 14:13:04][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 18/05/24][TIME --- 14:13:04][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 14:13:10][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 14:13:15][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 15:54:04][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 118 -> cursor.execute(query)
+[DATA --- 18/05/24][TIME --- 15:56:10][STATUS --- WARNING]     ->     Попытка воспользоваться регистрацией в онлайн-статусе.
+[DATA --- 18/05/24][TIME --- 15:56:20][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 16:02:03][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 18/05/24][TIME --- 16:02:03][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 18/05/24][TIME --- 16:06:56][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 16:07:00][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 16:07:31][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 16:07:36][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 16:16:26][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 145 -> dict_data[key] = data[i]
+[DATA --- 18/05/24][TIME --- 16:16:41][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 16:16:44][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 16:16:46][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 145 -> dict_data[key] = data[i]
+[DATA --- 18/05/24][TIME --- 16:18:40][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 145 -> print(dict_data[key], data[i])
+[DATA --- 18/05/24][TIME --- 16:24:11][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 16:24:18][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 18/05/24][TIME --- 16:29:04][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: template
+																		в строке: 19 -> Приветствуем вас, {{ f"data['surname'] data['name'] data['thurname']" }}
+[DATA --- 18/05/24][TIME --- 16:43:14][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 147 -> for i, j in dict_data:
+[DATA --- 18/05/24][TIME --- 16:44:09][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 147 -> for i, j in dict_data:
+[DATA --- 18/05/24][TIME --- 16:44:19][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: template
+																		в строке: 21 -> <!--{% for %}
+[DATA --- 18/05/24][TIME --- 17:51:27][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 18/05/24][TIME --- 17:52:20][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 19/05/24][TIME --- 10:21:43][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 19/05/24][TIME --- 10:39:38][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 153 -> dict_data[key] = data[i]
+[DATA --- 19/05/24][TIME --- 16:35:47][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getattr
+																		в строке: 485 -> return getattr(obj, attribute)
+[DATA --- 19/05/24][TIME --- 17:10:12][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 179 -> update_user(request.form)
+[DATA --- 19/05/24][TIME --- 17:10:38][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 179 -> update_user(request.form)
+[DATA --- 19/05/24][TIME --- 17:12:22][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 179 -> update_user(request.form)
+[DATA --- 19/05/24][TIME --- 17:12:30][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 179 -> update_user(request.form)
+[DATA --- 19/05/24][TIME --- 17:12:57][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 179 -> update_user(request.form)
+[DATA --- 19/05/24][TIME --- 17:14:14][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 19/05/24][TIME --- 17:14:22][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 19/05/24][TIME --- 17:20:50][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 178 -> update_profile(request.form, session)
+[DATA --- 19/05/24][TIME --- 17:21:20][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 178 -> update_profile(request.form, session)
+[DATA --- 19/05/24][TIME --- 17:22:26][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_profile
+																		в строке: 178 -> update_profile(request.form, session)
+[DATA --- 19/05/24][TIME --- 17:24:58][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:25:41][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:25:44][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:26:11][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:26:20][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:26:52][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:26:55][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 19/05/24][TIME --- 17:26:59][STATUS --- WARNING]     ->     Данный пользователь с login: egorka не существует. Введите логин еще раз.
+[DATA --- 19/05/24][TIME --- 17:27:06][STATUS --- WARNING]     ->     Данный пользователь с login: egorka не существует. Введите логин еще раз.
+[DATA --- 19/05/24][TIME --- 17:29:40][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 19/05/24][TIME --- 17:30:54][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:30:57][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:32:25][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/05/24][TIME --- 17:47:17][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 23/05/24][TIME --- 10:23:16][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 10:23:23][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 23/05/24][TIME --- 10:23:34][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 10:23:40][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 10:29:05][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 10:29:10][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 10:30:26][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 10:30:32][STATUS --- WARNING]     ->     Введен неверный логин или пароль. Попробуйте еще раз.
+[DATA --- 23/05/24][TIME --- 13:24:12][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 13:24:22][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 23/05/24][TIME --- 13:27:34][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 13:28:44][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 23/05/24][TIME --- 13:28:44][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 23/05/24][TIME --- 13:35:44][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 13:37:31][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 14:22:42][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 14:22:53][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 15:25:43][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 23/05/24][TIME --- 15:29:20][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 23/05/24][TIME --- 15:54:57][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_home
+																		в строке: 203 -> where uuid='{session['ID']}'
+[DATA --- 23/05/24][TIME --- 15:55:21][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_home
+																		в строке: 203 -> where uuid='{session['ID']}'
+[DATA --- 23/05/24][TIME --- 15:56:33][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_home
+																		в строке: 203 -> where uuid='{session['ID']}'
+[DATA --- 23/05/24][TIME --- 15:56:36][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_home
+																		в строке: 203 -> where uuid='{session['ID']}'
+[DATA --- 23/05/24][TIME --- 16:15:05][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getattr
+																		в строке: 485 -> return getattr(obj, attribute)
+[DATA --- 23/05/24][TIME --- 16:20:04][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 23/05/24][TIME --- 16:20:20][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 24/05/24][TIME --- 15:05:10][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 24/05/24][TIME --- 15:16:00][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 21 -> {% for %}
+[DATA --- 24/05/24][TIME --- 15:16:02][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 21 -> {% for %}
+[DATA --- 24/05/24][TIME --- 15:16:11][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 45 -> <link href="{{ url_for('static', filename='user/home.css')}}" rel="stylesheet" />
+[DATA --- 24/05/24][TIME --- 15:16:12][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 45 -> <link href="{{ url_for('static', filename='user/home.css')}}" rel="stylesheet" />
+[DATA --- 24/05/24][TIME --- 15:16:40][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 45 -> <link href="{{ url_for('static', filename='user/home.css')}}" rel="stylesheet" />
+[DATA --- 24/05/24][TIME --- 15:16:42][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 45 -> <link href="{{ url_for('static', filename='user/home.css')}}" rel="stylesheet" />
+[DATA --- 24/05/24][TIME --- 15:16:43][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 45 -> <link href="{{ url_for('static', filename='user/home.css')}}" rel="stylesheet" />
+[DATA --- 24/05/24][TIME --- 15:37:03][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 29 -> <input type="text" name="{{ list_home[i] }}"  value="{{ data[i] }}" placeholder="{{ list_home[i.lower() }}" required>
+[DATA --- 24/05/24][TIME --- 15:37:05][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 29 -> <input type="text" name="{{ list_home[i] }}"  value="{{ data[i] }}" placeholder="{{ list_home[i.lower() }}" required>
+[DATA --- 24/05/24][TIME --- 15:37:45][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:37:49][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:37:50][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:38:35][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:38:37][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:38:37][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:38:45][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:38:54][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:39:21][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:39:57][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:40:44][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 56 -> {% for i in range(count_home) %}
+[DATA --- 24/05/24][TIME --- 15:46:40][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 56 -> {% for i in range(count_home) %}
+[DATA --- 24/05/24][TIME --- 15:49:24][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 56 -> {% for i in range(count_home) %}
+[DATA --- 24/05/24][TIME --- 15:50:16][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 15:50:19][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 15:50:20][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 24/05/24][TIME --- 15:50:25][STATUS --- WARNING]     ->     Введен неверный логин или пароль. Попробуйте еще раз.
+[DATA --- 24/05/24][TIME --- 15:50:28][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 24/05/24][TIME --- 15:50:31][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:50:53][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:51:48][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:51:49][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:52:29][STATUS --- ERROR]       ->     Обратитесь к файлу: utils.py
+																		в функции/переменной или т.п.: from_obj
+																		в строке: 83 -> if hasattr(obj, "jinja_pass_arg"):
+[DATA --- 24/05/24][TIME --- 15:53:49][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 25 -> {% for i in list_home|lenght %}
+[DATA --- 24/05/24][TIME --- 15:53:50][STATUS --- ERROR]       ->     Обратитесь к файлу: home.html
+																		в функции/переменной или т.п.: template
+																		в строке: 25 -> {% for i in list_home|lenght %}
+[DATA --- 24/05/24][TIME --- 16:00:54][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_home
+																		в строке: 218 -> update_home(request.form, session)
+[DATA --- 24/05/24][TIME --- 16:01:46][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_home
+																		в строке: 218 -> update_home(request.form, session)
+[DATA --- 24/05/24][TIME --- 16:03:24][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_home
+																		в строке: 218 -> update_home(request.form, session)
+[DATA --- 24/05/24][TIME --- 16:03:52][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: update_home
+																		в строке: 218 -> update_home(request.form, session)
+[DATA --- 24/05/24][TIME --- 16:04:58][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 16:05:33][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 16:05:37][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 16:11:16][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 16:11:47][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 24/05/24][TIME --- 16:12:17][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: insert_home_
+																		в строке: 267 -> cursor.execute(query)
+[DATA --- 24/05/24][TIME --- 16:12:38][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: insert_home_
+																		в строке: 267 -> cursor.execute(query)
+[DATA --- 24/05/24][TIME --- 16:13:18][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 24/05/24][TIME --- 16:15:14][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 24/05/24][TIME --- 16:15:55][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 25/05/24][TIME --- 04:54:33][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 26/05/24][TIME --- 09:15:33][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 26/05/24][TIME --- 09:17:28][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 26/05/24][TIME --- 09:18:49][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 27/05/24][TIME --- 10:06:07][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 29/05/24][TIME --- 08:48:54][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 01/06/24][TIME --- 05:10:56][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 01/06/24][TIME --- 05:42:37][STATUS --- ERROR]       ->     Обратитесь к файлу: profile_.html
+																		в функции/переменной или т.п.: template
+																		в строке: 21 -> <!--{% for %}
+[DATA --- 01/06/24][TIME --- 05:42:48][STATUS --- ERROR]       ->     Обратитесь к файлу: profile_.html
+																		в функции/переменной или т.п.: template
+																		в строке: 21 -> <!--{% for %}
+[DATA --- 01/06/24][TIME --- 05:44:20][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getattr
+																		в строке: 485 -> return getattr(obj, attribute)
+[DATA --- 01/06/24][TIME --- 05:44:56][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getattr
+																		в строке: 485 -> return getattr(obj, attribute)
+[DATA --- 01/06/24][TIME --- 05:54:13][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 01/06/24][TIME --- 05:54:14][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 01/06/24][TIME --- 05:55:56][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 01/06/24][TIME --- 05:55:58][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 01/06/24][TIME --- 06:55:52][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 07/06/24][TIME --- 14:19:55][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 07/06/24][TIME --- 14:59:42][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 14:59:57][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:01:07][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:05:01][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:05:03][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:05:41][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:07:57][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:07:59][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:22:10][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:23:22][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:24:48][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:24:59][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:25:00][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:25:16][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:25:32][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:25:39][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:26:38][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 15:29:19][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 71 -> {% for i in range(n) %}
+[DATA --- 07/06/24][TIME --- 15:31:39][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_count_home
+																		в строке: 284 -> cursor.execute(query)
+[DATA --- 07/06/24][TIME --- 15:31:47][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 71 -> {% for i in range(n) %}
+[DATA --- 07/06/24][TIME --- 15:35:44][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: template
+																		в строке: 84 -> {% endfor %}
+[DATA --- 07/06/24][TIME --- 15:36:13][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:36:28][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 15:59:05][STATUS --- ERROR]       ->     Обратитесь к файлу: profile.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 72 -> {% for i in range(n) %}
+[DATA --- 07/06/24][TIME --- 15:59:51][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:01:14][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 07/06/24][TIME --- 16:06:15][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 16:11:30][STATUS --- ERROR]       ->     Обратитесь к файлу: environment.py
+																		в функции/переменной или т.п.: getitem
+																		в строке: 466 -> return obj[argument]
+[DATA --- 07/06/24][TIME --- 16:15:13][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:15:16][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:15:20][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:17:13][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:17:37][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:18:42][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:18:46][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:20:49][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 07/06/24][TIME --- 16:22:23][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 07/06/24][TIME --- 16:22:36][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 07/06/24][TIME --- 16:32:28][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 07/06/24][TIME --- 16:32:36][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 07/06/24][TIME --- 17:51:40][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 07/06/24][TIME --- 17:51:46][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 07/06/24][TIME --- 17:53:27][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 07/06/24][TIME --- 17:54:11][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 07/06/24][TIME --- 17:54:33][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 07/06/24][TIME --- 17:54:49][STATUS --- ERROR]       ->     Обратитесь к файлу: templating.py
+																		в функции/переменной или т.п.: _get_source_fast
+																		в строке: 99 -> raise TemplateNotFound(template)
+[DATA --- 07/06/24][TIME --- 17:56:16][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: get_data
+																		в строке: 134 -> full_name = ' '.join(list(map(str, cursor.fetchall()[0])))
+[DATA --- 07/06/24][TIME --- 18:14:49][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 17/06/24][TIME --- 13:39:19][STATUS --- WARNING]     ->     Введен неверный логин или пароль. Попробуйте еще раз.
+[DATA --- 17/06/24][TIME --- 13:39:25][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 17/06/24][TIME --- 17:08:41][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 17/06/24][TIME --- 18:05:55][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 17/06/24][TIME --- 18:11:04][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 17/06/24][TIME --- 18:11:27][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 17/06/24][TIME --- 18:11:35][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 19/06/24][TIME --- 15:08:01][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 08:25:37][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 09:31:31][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 21/06/24][TIME --- 10:37:42][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: check_service
+																		в строке: 332 -> return [cursor.fetchone()] > 0
+[DATA --- 21/06/24][TIME --- 10:41:55][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: show_service
+																		в строке: 306 -> if check_service(services['ID']):
+[DATA --- 21/06/24][TIME --- 10:41:57][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: show_service
+																		в строке: 306 -> if check_service(services['ID']):
+[DATA --- 21/06/24][TIME --- 10:42:21][STATUS --- ERROR]       ->     Обратитесь к файлу: user.py
+																		в функции/переменной или т.п.: show_service
+																		в строке: 306 -> if check_service(services['ID']):
+[DATA --- 21/06/24][TIME --- 10:52:47][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: info_service
+																		в строке: 348 -> [[info]] = cursor.fetchall()
+[DATA --- 21/06/24][TIME --- 10:53:18][STATUS --- ERROR]       ->     Обратитесь к файлу: utilits.py
+																		в функции/переменной или т.п.: info_service
+																		в строке: 348 -> [info] = cursor.fetchall()
+[DATA --- 21/06/24][TIME --- 11:12:14][STATUS --- ERROR]       ->     Обратитесь к файлу: show_service.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 19 -> {% for i in range(info | lenght) %}
+[DATA --- 21/06/24][TIME --- 11:12:16][STATUS --- ERROR]       ->     Обратитесь к файлу: show_service.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 19 -> {% for i in range(info | lenght) %}
+[DATA --- 21/06/24][TIME --- 11:12:46][STATUS --- ERROR]       ->     Обратитесь к файлу: show_service.html
+																		в функции/переменной или т.п.: top-level template code
+																		в строке: 19 -> {% for i in range(info|lenght) %}
+[DATA --- 21/06/24][TIME --- 11:50:56][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 11:53:50][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 21/06/24][TIME --- 11:53:50][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 21/06/24][TIME --- 11:54:18][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 11:55:48][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 21/06/24][TIME --- 11:55:48][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 21/06/24][TIME --- 11:57:47][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 11:58:01][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 21/06/24][TIME --- 11:58:01][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 21/06/24][TIME --- 12:36:44][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 12:36:48][STATUS --- WARNING]     ->     Введен неверный логин или пароль. Попробуйте еще раз.
+[DATA --- 21/06/24][TIME --- 12:36:51][STATUS --- WARNING]     ->     Введен неверный логин или пароль. Попробуйте еще раз.
+[DATA --- 21/06/24][TIME --- 12:37:13][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 12:37:28][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 21/06/24][TIME --- 13:12:41][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 13:21:49][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 13:21:57][STATUS --- WARNING]     ->     Попытка воспользоваться регистрацией в онлайн-статусе.
+[DATA --- 21/06/24][TIME --- 13:23:23][STATUS --- WARNING]     ->     Попытка воспользоваться регистрацией в онлайн-статусе.
+[DATA --- 21/06/24][TIME --- 13:23:23][STATUS --- WARNING]     ->     Попытка воспользоваться регистрацией в онлайн-статусе.
+[DATA --- 21/06/24][TIME --- 13:30:26][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 13:33:35][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 13:34:31][STATUS --- ERROR]       ->     Обратитесь к файлу: mixins.py
+																		в функции/переменной или т.п.: oncall
+																		в строке: 200 -> rv = getattr(super(UpdateDictMixin, self), name)(*args, **kw)
+[DATA --- 21/06/24][TIME --- 13:35:40][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 13:35:59][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 13:37:31][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 13:37:38][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 14:05:33][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 14:06:35][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 21/06/24][TIME --- 14:06:35][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 21/06/24][TIME --- 14:07:05][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 14:07:10][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 14:07:52][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 14:07:56][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 14:08:19][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 14:08:26][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 15:48:36][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 15:53:50][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 15:56:52][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 15:56:58][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 15:57:23][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 15:57:27][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:12:59][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:13:06][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:13:52][STATUS --- ERROR]       ->     Обратитесь к файлу: home_page.html
+																		в функции/переменной или т.п.: template
+																		в строке: 17 -> {% elif %}
+[DATA --- 21/06/24][TIME --- 16:14:45][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:14:52][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:15:01][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:15:08][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:15:15][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:15:21][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:15:41][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:15:46][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:17:44][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:17:50][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:19:16][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:19:20][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:21:22][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:21:27][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:21:37][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:21:42][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:21:51][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:22:00][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:22:07][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:22:11][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:24:16][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:24:21][STATUS --- WARNING]     ->     Введен неверный логин или пароль. Попробуйте еще раз.
+[DATA --- 21/06/24][TIME --- 16:24:26][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:24:40][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:24:49][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:24:57][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:25:05][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:25:10][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:25:26][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:26:01][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:26:05][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 21/06/24][TIME --- 16:26:41][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 21/06/24][TIME --- 16:26:45][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:00:43][STATUS --- SUCCESS]     ->     Данные успешное добавлены в БД (регистрация).
+[DATA --- 22/06/24][TIME --- 06:00:43][STATUS --- SUCCESS]     ->     Новый пользователь зарегистрирован.
+[DATA --- 22/06/24][TIME --- 06:00:49][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 22/06/24][TIME --- 06:00:54][STATUS --- SUCCESS]     ->     Данные пользователя обновлены.
+[DATA --- 22/06/24][TIME --- 06:01:10][STATUS --- SUCCESS]     ->     Данные новой квартиры добавлены.
+[DATA --- 22/06/24][TIME --- 06:01:44][STATUS --- ERROR]       ->     Обратитесь к файлу: mixins.py
+																		в функции/переменной или т.п.: oncall
+																		в строке: 200 -> rv = getattr(super(UpdateDictMixin, self), name)(*args, **kw)
+[DATA --- 22/06/24][TIME --- 06:01:55][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:02:31][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 22/06/24][TIME --- 06:02:35][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:02:39][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 22/06/24][TIME --- 06:03:00][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:03:09][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 22/06/24][TIME --- 06:03:14][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:03:22][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 22/06/24][TIME --- 06:03:27][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:03:46][STATUS --- SUCCESS]     ->     Выход из аккаунта.
+[DATA --- 22/06/24][TIME --- 06:03:51][STATUS --- SUCCESS]     ->     Прошла авторизация.
+[DATA --- 22/06/24][TIME --- 06:04:06][STATUS --- SUCCESS]     ->     Выход из аккаунта.

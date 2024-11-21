@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+}
+
+body{
+	height: 100vh;
+	padding: 10px;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+nav {
+	background: white;
+	width: 660px;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	border-radius: 22px;
+	box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.3);
+	position: relative;
+	margin: 0 auto;
+}
+
+nav > a {
+	color: black;
+	text-decoration: none;
+	padding: 16px 16px;
+	border-radius: 22px;
+}
+
+nav > a:hover {
+	transition: 0.25s;
+	background: rgb(64, 211, 27);
+	color: white;
+}
+
+.container1{
+	max-width: 700px;
+	width: 100%;
+
+	max-height: 600px;
+	height: 100%;
+
+	background-color: #fff;
+	padding: 25px 30px;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+	
+	position: relative;
+	margin: 30px 0 0 20px;
+}
+
+.container1 .title1{
+	font-size: 25px;
+	font-weight: 500;
+	position: relative;
+	margin: 10px 0 0 34%;
+}
+
+.container1 .title1::before{
+	content: "";
+	position: absolute;
+	padding: 0 0 0 12.8%;
+	bottom: 0;
+	height: 3px;
+	width: 147px;
+	border-radius: 5px;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container2{
+	max-width: 700px;
+	width: 100%;
+
+	max-height: 600px;
+	height: 100%;
+
+	background-color: #fff;
+	padding: 25px 30px;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+	
+	position: relative;
+	margin: -600px 0 0 800px;
+}
+
+.container2 .title2{
+	font-size: 25px;
+	font-weight: 500;
+	position: relative;
+	margin: 10px 0 0 28%;
+}
+
+.container2 .title2::before{
+	content: "";
+	position: absolute;
+	padding: 0 0 0 32.5%;
+	bottom: 0;
+	height: 3px;
+	width: 147px;
+	border-radius: 5px;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container1 .welcome {
+	display: block;
+	/*font-weight: 1000;*/
+	font-size: x-large;
+	margin: 30px 0 0 20px;
+}
+
+.container1 .info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.container1 .info .info_ {
+	margin-bottom: 10px;
+	width: calc(100% / 2 - 70px);
+	margin: 30px 0 0 20px;
+}
+
+.container1 .info input{
+	display: block;
+	margin: 20px 140px 0 0;
+
+	width: 250px;
+	height: 40px;
+
+	outline: none;
+	font-size: 16px;
+	border-radius: 5px;
+	padding: 0 0 0 20px;
+}
+
+form .button{
+	height: 45px;
+	margin: 40px 0 0 250px;
+}
+
+form .button input{
+	height: 100%;
+	width: 30%;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+form .button input:hover{
+  	background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+
+.button{
+	height: 45px;
+	margin: 40px 0 0 250px;
+}
+
+.button input{
+	height: 100%;
+	width: 30%;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.button input:hover{
+  	background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+
+.home {
+	display: flex;
+	justify-content: space-around;
+}
+
+.home .info {
+	width: 150px;
+  	height: 100px;
+	margin: 60px 0 0 0;
+	border: 3px solid black;
+}
+
+.home .button_ {
+	margin: 40px 0 0 35px;
+}
+
+.home .button_ input{
+	height: 20%;
+	width: 70%;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.home .button_ input:hover{
+	background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+
+.container2 .button_home {
+	height: 45px;
+	margin: 290px 0 0 270px;
+}
+
+.container2 .button_home input {
+	height: 100%;
+	width: 30%;
+	border-radius: 5px;
+	border: none;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container2 .button_home input:hover{
+	background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+.container2 .title_home{
+	font-size: 16px;
+	/*font-weight: 500;*/
+	position: relative;
+	margin: 4px 0 0 17%;
+}
+
+.container2 .title_home::before{
+	content: "";
+	position: absolute;
+	padding: 0 0 0 0;
+	bottom: 0;
+	height: 3px;
+	width: 100px;
+	border-radius: 5px;
+	background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
