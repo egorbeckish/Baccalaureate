@@ -1,0 +1,5 @@
+input_variables: [text]
+output_parser: null
+template: '{text}'
+template_format: f-string
+_type: prompt
