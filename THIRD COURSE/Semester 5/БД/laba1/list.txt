@@ -1,0 +1,35 @@
+create table room
+(
+Rnum varchar(3) primary key not null check (Rnum similar to '[\d]{3}'),
+Tnum varchar(6) not null unique check (Tnum similar to '[\d]{6}')
+);
+
+
+create table student 
+(
+Snum varchar(6) primary key not null check (Snum similar to '[\d]{6}'),
+Snam varchar(40) not null check (Snam similar to '[а-яА-Я\s]+'),
+Ann int not null check (Ann > 0 and Ann <= 5),
+Stel varchar(10) not null unique check (Stel similar to '[0-9]{10}'),
+Rnum varchar(3) not null references room(Rnum)
+);
+;
+
+insert into room values
+('000', '000000'),
+('001', '000001');
+;
+
+insert into student values
+('000000', 'Бекиш Егор Павлович', '1', '9131778821', '000'),
+('000001', 'Бекиш Павел Владимирович', '1', '9131882844', '000');
+;
+
+select * from room join student on
+room.rnum = student.rnum;
+
+drop table student;
+drop table room;
+;
+
+

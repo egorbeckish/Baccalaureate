@@ -1,0 +1,26 @@
+select * from student;
+select * from room;
+select * from "pr-dis";
+select * from exams;
+;
+
+select snam, rnum from student where ann='1';
+ 
+select snam, pnam, ball from
+(select snum, exams.pnam, ball from "pr-dis" join exams on exams.pnam="pr-dis".pnam and dnam='ПЯВУ') temp
+join student on
+student.snum = temp.snum and ball > 2;
+
+select snam, pnam, ball from (select snum, exams.pnam, ball from "pr-dis" join exams on exams.pnam="pr-dis".pnam and dnam='ПЯВУ') temp join student on student.snum = temp.snum and ball > 2;
+
+select count(*) from
+(select snum, exams.pnam, ball from "pr-dis" join exams on exams.pnam="pr-dis".pnam and dnam='ВУПЯ') temp
+join student on
+student.snum = temp.snum and ann='1' and ball > 2;
+
+select count(*) from (select snum, exams.pnam, ball from "pr-dis" join exams on exams.pnam="pr-dis".pnam and dnam='ВУПЯ') temp join student on student.snum = temp.snum and ann='1' and ball > 2;
+
+select snam, avg(ball) from exams join student on exams.snum = student.snum group by snam;
+
+
+
