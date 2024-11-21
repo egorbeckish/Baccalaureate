@@ -1,0 +1,1 @@
+# from ftplib import FTP# from data import *## with FTP('test.rebex.net', 'demo', 'password') as ftp:##     file_list = ftp.nlst()#     print(file_list)##     # ftp.cwd('/misc/GEMA/GEMA/')#     # print(ftp.nlst())##     # ftp.mkd('my_dir')#
