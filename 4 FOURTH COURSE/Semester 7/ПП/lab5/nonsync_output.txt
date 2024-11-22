@@ -1,0 +1,91 @@
+READER 3: Nrdr=3
+READER 3: Nrdr=3: data=0 inter=0
+READER 4: Nrdr=3
+READER 4: Nrdr=3: data=0 inter=0
+READER 5: Nrdr=3
+READER 5: Nrdr=3: data=0 inter=0
+
+WRITER 7: data=1 inter=0
+
+WRITER 0: data=2 inter=0
+
+WRITER 7: data=3 inter=1
+READER 3: Nrdr=0
+READER 4: Nrdr=0
+READER 5: Nrdr=0
+
+WRITER 0: data=4 inter=1
+
+WRITER 7: data=5 inter=2
+
+WRITER 0: data=6 inter=2
+
+WRITER 7: data=7 inter=3
+
+WRITER 0: data=8 inter=3
+READER 4: Nrdr=2
+READER 4: Nrdr=2: data=8 inter=1
+READER 3: Nrdr=2
+READER 3: Nrdr=2: data=8 inter=1
+READER 5: Nrdr=3
+READER 5: Nrdr=3: data=8 inter=1
+
+WRITER 7: data=9 inter=4
+
+WRITER 0: data=10 inter=4
+READER 3: Nrdr=0
+READER 4: Nrdr=0
+READER 5: Nrdr=0
+
+WRITER 7: data=12 inter=5
+
+WRITER 0: data=12 inter=5
+
+WRITER 7: data=14 inter=6
+
+WRITER 0: data=14 inter=6
+READER 3: Nrdr=3
+READER 3: Nrdr=3: data=14 inter=2
+READER 4: Nrdr=3
+READER 4: Nrdr=3: data=14 inter=2
+READER 5: Nrdr=3
+READER 5: Nrdr=3: data=14 inter=2
+READER 3: Nrdr=0
+READER 5: Nrdr=0
+READER 4: Nrdr=0
+READER 3: Nrdr=3
+READER 3: Nrdr=3: data=14 inter=3
+READER 4: Nrdr=3
+READER 4: Nrdr=3: data=14 inter=3
+READER 5: Nrdr=3
+READER 5: Nrdr=3: data=14 inter=3
+READER 4: Nrdr=0
+READER 5: Nrdr=0
+READER 3: Nrdr=0
+READER 3: Nrdr=3
+READER 3: Nrdr=3: data=14 inter=4
+READER 4: Nrdr=3
+READER 4: Nrdr=3: data=14 inter=4
+READER 5: Nrdr=3
+READER 5: Nrdr=3: data=14 inter=4
+READER 4: Nrdr=0
+READER 5: Nrdr=0
+READER 3: Nrdr=0
+READER 5: Nrdr=3
+READER 4: Nrdr=3
+READER 4: Nrdr=3: data=14 inter=5
+READER 3: Nrdr=3
+READER 3: Nrdr=3: data=14 inter=5
+READER 5: Nrdr=3: data=14 inter=5
+READER 3: Nrdr=0
+READER 5: Nrdr=0
+READER 4: Nrdr=0
+READER 3: Nrdr=3
+READER 3: Nrdr=3: data=14 inter=6
+READER 4: Nrdr=3
+READER 4: Nrdr=3: data=14 inter=6
+READER 5: Nrdr=3
+READER 5: Nrdr=3: data=14 inter=6
+READER 5: Nrdr=0
+READER 3: Nrdr=0
+READER 4: Nrdr=0

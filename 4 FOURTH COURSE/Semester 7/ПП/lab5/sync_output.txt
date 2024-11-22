@@ -1,0 +1,105 @@
+
+WRITER 0: data=1 inter=0
+
+
+WRITER 1: data=2 inter=0
+
+
+WRITER 4: data=3 inter=0
+
+READER 3: Nrdr=1
+READER 3: Nrdr=2: data=3 inter=0
+READER 2: Nrdr=2
+READER 2: Nrdr=2: data=3 inter=0
+READER 3: Nrdr=1
+READER 2: Nrdr=0
+
+WRITER 4: data=4 inter=1
+
+
+WRITER 0: data=5 inter=1
+
+
+WRITER 1: data=6 inter=1
+
+READER 3: Nrdr=1
+READER 2: Nrdr=2
+READER 2: Nrdr=2: data=6 inter=1
+READER 3: Nrdr=2: data=6 inter=1
+READER 2: Nrdr=1
+READER 3: Nrdr=0
+
+WRITER 0: data=7 inter=2
+
+
+WRITER 4: data=8 inter=2
+
+
+WRITER 1: data=9 inter=2
+
+READER 2: Nrdr=1
+READER 2: Nrdr=2: data=9 inter=2
+READER 3: Nrdr=2
+READER 3: Nrdr=2: data=9 inter=2
+READER 3: Nrdr=1
+READER 2: Nrdr=0
+
+WRITER 1: data=10 inter=3
+
+
+WRITER 0: data=11 inter=3
+
+
+WRITER 4: data=12 inter=3
+
+READER 3: Nrdr=1
+READER 3: Nrdr=2: data=12 inter=3
+READER 2: Nrdr=2
+READER 2: Nrdr=2: data=12 inter=3
+READER 3: Nrdr=1
+READER 2: Nrdr=0
+
+WRITER 1: data=13 inter=4
+
+
+WRITER 4: data=14 inter=4
+
+
+WRITER 0: data=15 inter=4
+
+READER 3: Nrdr=1
+READER 3: Nrdr=1: data=15 inter=4
+READER 2: Nrdr=2
+READER 2: Nrdr=2: data=15 inter=4
+READER 2: Nrdr=1
+READER 3: Nrdr=0
+
+WRITER 0: data=16 inter=5
+
+
+WRITER 4: data=17 inter=5
+
+
+WRITER 1: data=18 inter=5
+
+READER 3: Nrdr=1
+READER 3: Nrdr=1: data=18 inter=5
+READER 2: Nrdr=2
+READER 2: Nrdr=2: data=18 inter=5
+READER 2: Nrdr=1
+READER 3: Nrdr=0
+
+WRITER 4: data=19 inter=6
+
+
+WRITER 0: data=20 inter=6
+
+
+WRITER 1: data=21 inter=6
+
+READER 3: Nrdr=1
+READER 3: Nrdr=2: data=21 inter=6
+READER 2: Nrdr=2
+READER 2: Nrdr=2: data=21 inter=6
+READER 2: Nrdr=1
+READER 3: Nrdr=0
