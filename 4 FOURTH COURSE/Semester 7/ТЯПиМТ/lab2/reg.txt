@@ -1,0 +1,46 @@
+\s*
+(?:
+	(?<type>
+		int(?:\s+long|\s+short)?|
+		double(?:\s+long)?|
+		long(?:\s+int|\s+double)?|
+		short(?:\s+int)?|
+		float|
+		char
+	)
+)
+\s*
+(?:
+	(?:
+		(?:
+			(?<id>
+				[a-zA-Z_][a-zA-Z_0-9]*
+			)
+		)
+
+		(?:
+			\s*
+			(?:
+				\,\s*
+			)
+		)
+	)*
+
+	(?:
+		\s*
+		\[
+			(?:\s*(?<op>[1-9]\d*)\s*)
+		\]
+		\s*
+	)*
+)
+\s*\;
+
+
+\s*(?:(?<type>int(?:\s+long|\s+short)?|double(?:\s+long)?|long(?:\s+int|\s+double)?|short(?:\s+int)?|float|char))\s*(?:(?:(?:(?<id>[a-zA-Z_][a-zA-Z_0-9]*))*(?:\s*\[(?:\s*(?<op>[1-9]\d*))\]\s*)*(?:\s*(?:\,\s*)*)))\s*\;
+
+
+\s*(?:(?<type>int(?:\s+long|\s+short)?|double(?:\s+long)?|long(?:\s+int|\s+double)?|short(?:\s+int)?|float|char))\s*(?:(?:(?<id>[a-zA-Z_][a-zA-Z_0-9]*))*(?:\s*\[(?:\s*(?<op>[1-9]\d*))\]\s*)*(?:\s*(?:\,\s*)*))\s*\;
+
+
+\s*(?:(?<type>int(?:\s+long|\s+short)?|double(?:\s+long)?|long(?:\s+int|\s+double)?|short(?:\s+int)?|float|char))\s*(?:(?:(?:(?<id>[a-zA-Z_][a-zA-Z_0-9]*))(?:\s*(?:\,\s*)))*(?:\s*\[(?:\s*(?<op>[1-9]\d*)\s*)\]\s*)*)\s*\;

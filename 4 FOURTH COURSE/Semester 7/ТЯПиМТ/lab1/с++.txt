@@ -1,0 +1,7 @@
+int
+	a[	10
+	]
+	;int b;
+int long gg;
+long kk, float1;
+char aa;
