@@ -1,0 +1,40 @@
+\s*
+(
+	int(?:\s+long|\s+short)?|
+	double(?:\s+long)?|
+	long(?:\s+int|\s+double)?|
+	short(?:\s+int)?|
+	float|
+	char
+)
+\s+
+(
+	(?:
+		(?<id>
+			[_a-zA-Z][_a-zA-Z0-9]*
+		)
+
+		(?:
+			\s*\[
+				\s*
+				[1-9]\d*
+			\]
+			\s*
+		)*
+	)
+	\s*
+	(
+		,
+		(?=
+			\s*
+			[_a-zA-Z]
+		)|
+		;
+	)
+	\s*
+)*
+
+
+\s*(?:(?<type>int(?:\s+long|\s+short)?|double(?:\s+long)?|long(?:\s+int|\s+double)?|short(?:\s+int)?|float|char))\s+((?:(?<id>[_a-zA-Z][_a-zA-Z0-9]*)(?:\s*\[\s*(?<value>[1-9]\d*)\s*\]\s*)*)\s*(,(?=\s*[_a-zA-Z])|;)\s*)*
+
+
