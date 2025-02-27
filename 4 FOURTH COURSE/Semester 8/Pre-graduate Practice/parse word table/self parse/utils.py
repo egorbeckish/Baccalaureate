@@ -186,7 +186,6 @@ def join_subtitles(columns: int, subtitles: list[list[str]]) -> None:
     """
 
     index: list[list[int]] = join_index(subtitles)
-    print(index)
 
     for i, subtitle in enumerate(subtitles):
         new_subtitle: list[str] = [''] * columns
@@ -200,10 +199,32 @@ def join_subtitles(columns: int, subtitles: list[list[str]]) -> None:
             print(new_subtitle)
 
         subtitles[i] = new_subtitle
-     
+    
+
+def join_subtitles2(columns, subtitles):
+    index: list[list[int]] = join_index(subtitles)
+
+    for i, subtitle in enumerate(subtitles):
+        new_subtitle = [''] * index[i][0][0]
+        for j, row_index in enumerate(index[i]):
+            if j != len(index[i]) - 1:
+                row_index = [row_index[0], row_index[1] + 1]
+                _slice = slice(*row_index)
+                join_subtitle: str = '|'.join(subtitle[_slice])
+                diff = index[i][j + 1][0] - row_index[1] - 1
+                new_subtitle += [join_subtitle, '' * diff]
+
+        row_index = [row_index[0], row_index[1] + 1]
+        _slice = slice(*row_index)
+        join_subtitle: str = '|'.join(subtitle[_slice])
+        new_subtitle += [join_subtitle]
+        print(new_subtitle)
+
+
 
 def join_values(columns: int, index: list[list[int]], values: list[list[str]]) -> None:
     _join_index = index[-1]
+    print(_join_index)
     for i, value in enumerate(values):
         new_values: list[str] = [''] * columns
         if (length_index := len(_join_index)) == 1:

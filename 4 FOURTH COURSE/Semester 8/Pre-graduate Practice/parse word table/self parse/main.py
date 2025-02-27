@@ -34,7 +34,12 @@ columns = count_columns(title=title)
 rows = count_rows(table)
 
 subtitles = correct_subtitles(subtitles)
-show_layers_table(title, subtitles, values)
+# show_layers_table(title, subtitles, values)
 
-join_subtitles(columns, subtitles)
-show_layers_table(title, subtitles, values)
+join_subtitles2(columns, subtitles)
+
+# join_subtitles(columns, subtitles)
+# show_layers_table(title, subtitles, values)
+
+# _join_index = join_index(subtitles)
+# print(_join_index)
