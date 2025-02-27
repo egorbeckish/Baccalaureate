@@ -59,7 +59,7 @@ def layers(table: list[list[str]]) -> tuple[list[str] | list[list[str]]]:
 	return title, subtitles, values
      
 
-def correct_subtitles(subtitles: list[list[str]]) -> list[list[str]]:
+def unic_subtitles(subtitles: list[list[str]]) -> list[list[str]]:
     """
     Доопределение подзаголовков с учетом того, что у самого первого
     подзаголовка могут быть собственные подзаголовки.
@@ -173,7 +173,8 @@ def join_index(subtitles: list[list[str]]) -> list[list[int]]:
 	return index
      
 
-def join_subtitles(columns: int, subtitles: list[list[str]]) -> None:
+def join_subtitles2(columns: int, subtitles: list[list[str]]) -> None:
+    return "Данная функция не поддерживается"
     """
     Объединение по кол-ву столбцов всех подзаголовков.
 
@@ -201,25 +202,60 @@ def join_subtitles(columns: int, subtitles: list[list[str]]) -> None:
         subtitles[i] = new_subtitle
     
 
-def join_subtitles2(columns, subtitles):
+def join_subtitles(subtitles):
+    """
+    Объединение подзаголовков.
+
+    :params columns: Подзаголовки
+    :type columns: int
+    :params subtitles: Подзаголовки
+    :type subtitles: list[list[str]]
+    :return: Объединенные подзаголовки
+    :return type: None
+    """
+
     index: list[list[int]] = join_index(subtitles)
 
     for i, subtitle in enumerate(subtitles):
-        new_subtitle = [''] * index[i][0][0]
+        new_subtitle: list[str] = [''] * index[i][0][0]
         for j, row_index in enumerate(index[i]):
             if j != len(index[i]) - 1:
-                row_index = [row_index[0], row_index[1] + 1]
-                _slice = slice(*row_index)
+                row_index: list[int] = [row_index[0], row_index[1] + 1]
+                _slice: slice = slice(*row_index)
                 join_subtitle: str = '|'.join(subtitle[_slice])
-                diff = index[i][j + 1][0] - row_index[1] - 1
+                diff: int = index[i][j + 1][0] - row_index[1] - 1
                 new_subtitle += [join_subtitle, '' * diff]
 
-        row_index = [row_index[0], row_index[1] + 1]
-        _slice = slice(*row_index)
+        row_index: list[int] = [row_index[0], row_index[1] + 1]
+        _slice: slice = slice(*row_index)
         join_subtitle: str = '|'.join(subtitle[_slice])
         new_subtitle += [join_subtitle]
-        print(new_subtitle)
 
+        subtitles[i] = new_subtitle
+
+
+def correct_subtitles(subtitles):
+    title_subtitle = [subtitles[0]]
+    subtitles = subtitles[1:]
+
+    for row in subtitles:
+        for i, subtitle in enumerate(row):
+            if subtitle:
+                index = i
+                break
+        
+        tmp = row[:index]
+        row = row[index:]
+        for i in range(len(title_subtitle[0])):
+            if tmp[i] != title_subtitle[0][i]:
+                index = i
+                break
+        
+        row = title_subtitle[0][:index] + row
+        title_subtitle += [row]
+    
+    return title_subtitle
+            
 
 
 def join_values(columns: int, index: list[list[int]], values: list[list[str]]) -> None:
@@ -252,7 +288,7 @@ def all_tables(docx: Document) -> list:
      
 
 def get_table_docx(tables: list) -> list[list[str]]:
-    return [[cell.text for cell in row.cells] for row in tables[2].rows]
+    return [[cell.text for cell in row.cells] for row in tables[3].rows]
 
 
 def unic_values(row):
