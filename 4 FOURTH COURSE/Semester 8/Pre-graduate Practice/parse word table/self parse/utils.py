@@ -9,8 +9,8 @@ def get_table(table: list) -> list[list[str]]:
 	return list(map(lambda x: x.split(), table))
 
 
-def count_columns(title: list[str]) -> int:
-	return len(title[0])
+def count_columns(title: list[str]=None, table: list[list[str]]=None) -> int:
+	return len(table[0]) if table else len(title)
 
 
 def count_rows(table: list[list[str]]) -> int:
@@ -186,14 +186,18 @@ def join_subtitles(columns: int, subtitles: list[list[str]]) -> None:
     """
 
     index: list[list[int]] = join_index(subtitles)
+    print(index)
 
     for i, subtitle in enumerate(subtitles):
         new_subtitle: list[str] = [''] * columns
         for row_index in index[i]:
-            row_index[1] += 1
+            row_index: list[int] = [row_index[0], row_index[1] + 1]
             _slice: slice = slice(*row_index)
             join_subtitle: str = '|'.join(subtitle[_slice])
-            new_subtitle[row_index[0] if row_index[0] < columns else (row_index[0] - 1 if row_index[0] == columns else columns - 1)] = join_subtitle
+            place = row_index[0] if row_index[0] < columns else (row_index[0] - 1 if row_index[0] == columns else columns - 1)
+            # print(join_subtitle, place, _slice)
+            new_subtitle[place] = join_subtitle
+            print(new_subtitle)
 
         subtitles[i] = new_subtitle
      
@@ -207,8 +211,7 @@ def join_values(columns: int, index: list[list[int]], values: list[list[str]]) -
 
         else:
             for j in range(length_index - 1):
-                print(_join_index[j][0], _join_index[j + 1][0])
-            print(_join_index[j + 1][0])
+                pass
 
         # for row_index in index[-1]:
             # if len(row_index) == 1:
@@ -216,3 +219,43 @@ def join_values(columns: int, index: list[list[int]], values: list[list[str]]) -
 
             # else:
             #     print(value, row_index, index[0])
+
+
+
+def open_docx(docx: str) -> Document:
+    return Document(docx)
+     
+
+def all_tables(docx: Document) -> list:
+    return docx.tables
+     
+
+def get_table_docx(tables: list) -> list[list[str]]:
+    return [[cell.text for cell in row.cells] for row in tables[2].rows]
+
+
+def unic_values(row):
+    unic = []
+    for value in row:
+        if value not in unic:
+            unic += [value]
+
+    return unic
+     
+
+def layers_docx(table):
+    title = unic_values(table[0])
+
+    subtitles: list[list[str]] = []
+    values: list[list[str]] = []
+    for row in table[1:]:
+        format_subtitle = unic_values(row)
+
+        format_subtitle = ['' if value in title else value for value in format_subtitle]
+        if '' in format_subtitle:
+            subtitles += [format_subtitle]
+
+        else:
+            values += [format_subtitle]
+
+    return title, subtitles, values
