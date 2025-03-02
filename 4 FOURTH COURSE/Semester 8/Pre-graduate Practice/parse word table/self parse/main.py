@@ -1,4 +1,6 @@
-from utils import *
+import docx
+from docx import Document
+from tabulate import tabulate
 
 docx = Document('doc.docx')
 tables = docx.tables
