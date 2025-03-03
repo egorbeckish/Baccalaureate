@@ -66,3 +66,7 @@ def get_intervals(interval: list[list[int]]) -> None:
                 intervals[i] += [index_row + [row[j + 1]]]
 
         interval[i] = intervals[i]
+
+
+def write_table(table):
+    open('table.txt', 'a+', encoding='utf-8').write(table + '\n\n')
