@@ -1,3 +1,6 @@
+from library import *
+
+
 def get_intervals(interval: list[list[int]]) -> None:
     """
     Возвращает начало и конец интервалов.
@@ -68,5 +71,5 @@ def get_intervals(interval: list[list[int]]) -> None:
         interval[i] = intervals[i]
 
 
-def write_table(table):
-    open('table.txt', 'a+', encoding='utf-8').write(table + '\n\n')
+def write_table(table: tabulate) -> None:
+    open('table.txt', 'a+', encoding='utf-8').write(table + '\n\n\n')
