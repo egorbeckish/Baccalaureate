@@ -1,29 +1,8 @@
 from utils import *
 
 
-docx: Document = Document('тест босс таблицы.docx')
-tables: list = docx.tables
-# print(tables)
-table = tables[0]
-
-headers: list[str] = [cell.text for cell in table.rows[0].cells]
-data: list[str] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
-data: list[str] = data[1:] if data.count(data[0]) > 1 else data
-
-# print(
-#     tabulate(
-#         data, 
-#         headers=headers, 
-#         tablefmt="simple_grid", 
-#         showindex=False
-#     )
-# )
-
-write_table(
-    tabulate(
-        data, 
-        headers=headers, 
-        tablefmt="simple_grid", 
-        showindex=False
-    ) + '\n\n'
-)
+docx: Document = open_docx('doc.docx')
+tables = get_tables(docx)
+table = get_table(tables, 3)
+title, data = layers(table)
+show_table(title, data)

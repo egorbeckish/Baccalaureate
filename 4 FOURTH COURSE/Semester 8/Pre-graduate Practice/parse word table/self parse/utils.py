@@ -71,5 +71,50 @@ def get_intervals(interval: list[list[int]]) -> None:
         interval[i] = intervals[i]
 
 
-def write_table(table: tabulate) -> None:
+def open_docx(path: str) -> Document:
+    return Document(path)
+
+
+def get_tables(docx: Document) -> list:
+    return docx.tables
+
+
+def get_table(tables: list, index: int=None) -> list:
+    if index:
+        return tables[index]
+
+    return tables 
+
+
+def correct_data(data: list[list[str]]) -> None:
+    for i, row in enumerate(data):
+        row_isdigit: list[bool] = list(map(lambda x: x.isdigit(), row))
+        if all(row_isdigit):
+            length_row: int = len(row)
+            if sum(map(int, row)) == (length_row * (length_row + 1)) / 2:
+                data.pop(i)
+                break
+            
+    
+
+def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
+    title: list[str] = [cell.text for cell in table.rows[0].cells]
+    data: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
+    correct_data(data)
+
+    return title, data
+
+
+def show_table(title: list[str], data: list[list[str]]) -> None:
+    print(
+        tabulate(
+            data,
+            headers=title,
+            tablefmt="simple_grid", 
+            showindex=False
+        )
+    )
+
+
+def write_table_to_txt(table: tabulate) -> None:
     open('table.txt', 'a+', encoding='utf-8').write(table + '\n\n\n')
