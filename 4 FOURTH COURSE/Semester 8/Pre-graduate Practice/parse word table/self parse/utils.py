@@ -76,7 +76,30 @@ def open_docx(path: str) -> Document:
 
 
 def get_tables(docx: Document) -> list:
-    return docx.tables
+    tables = docx.tables
+
+    parse_table = []
+    for i in range(len(tables) - 1):
+        current = layers(tables[i])
+        _next = layers(tables[i + 1])
+        index = find_gauss(current[1])
+
+        if _next[0] in current[1]:
+            current = list(current)
+            current[1] += _next[1:][0]
+            tables.pop(i + 1)
+
+        # В итоговом варианте данную проверку убрать!!!
+        if index:
+            current[1].pop(index)
+        parse_table += [current]
+    
+    return parse_table
+
+
+def show_parse_table(table: list[list[str], list[list[str]]]=None, tables: list[list[list[str], list[list[str]]]]=None) -> None:
+    for table in tables:
+        print(table[0], table[1])
 
 
 def get_table(tables: list, index: int=None) -> list:
@@ -86,21 +109,20 @@ def get_table(tables: list, index: int=None) -> list:
     return tables 
 
 
-def correct_data(data: list[list[str]]) -> None:
+def find_gauss(data: list[list[str]]) -> None:
     for i, row in enumerate(data):
         row_isdigit: list[bool] = list(map(lambda x: x.isdigit(), row))
         if all(row_isdigit):
             length_row: int = len(row)
-            if sum(map(int, row)) == (length_row * (length_row + 1)) / 2:
-                data.pop(i)
-                break
+            if sum(map(int, row)) == (length_row * (length_row + 1)) / 2 and length_row == len(set(row)):
+                return i
             
     
 
 def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
     title: list[str] = [cell.text for cell in table.rows[0].cells]
     data: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
-    correct_data(data)
+    # correct_data(data)
 
     return title, data
 

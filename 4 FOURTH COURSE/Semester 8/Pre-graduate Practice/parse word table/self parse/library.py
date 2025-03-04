@@ -1,7 +1,7 @@
 import os
 
 
-os.system('pip install -r requirement.txt')
+os.system('python3 -m pip install --upgrade pip; pip install -r requirement.txt')
 
 
 import docx
