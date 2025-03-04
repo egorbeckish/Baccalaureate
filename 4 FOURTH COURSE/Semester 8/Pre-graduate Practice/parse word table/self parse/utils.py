@@ -81,6 +81,7 @@ def get_tables(docx: Document) -> list:
 
 def get_table_parse(tables: list) -> None:
     parse_table = []
+    length_before = len(tables)
     for i in range(len(tables) - 1):
         current = layers(tables[i])
         _next = layers(tables[i + 1])
@@ -89,13 +90,17 @@ def get_table_parse(tables: list) -> None:
         if _next[0] in current[1]:
             current = list(current)
             current[1] += _next[1:][0]
-            # tables.pop(i + 1)
+            tables.pop(i + 1)
 
         # В итоговом варианте данную проверку убрать!!! (оставить только current[1].pop(index))
         if index:
             current[1].pop(index)
         parse_table += [current]
     
+    length_after = len(tables)
+    if length_after == length_before:
+        parse_table += [layers(tables[-1])]
+
     return parse_table
 
 
@@ -119,12 +124,17 @@ def find_gauss(data: list[list[str]]) -> None:
 def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
     title: list[str] = [cell.text for cell in table.rows[0].cells]
     data: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
-    # correct_data(data)
 
     return title, data
 
 
-def show_table(title: list[str], data: list[list[str]]) -> None:
+def show_table(title: list[str]=None, data: list[list[str]]=None, tables=None) -> None:
+    if tables:
+        for table in tables:
+            show_table(table[0], table[1])
+        
+        return
+
     print(
         tabulate(
             data,
