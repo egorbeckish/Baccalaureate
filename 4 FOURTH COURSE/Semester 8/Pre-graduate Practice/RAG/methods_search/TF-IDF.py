@@ -89,8 +89,8 @@ class TFIDF:
 		
 if __name__ == "__main__":
 	tf_idf = TFIDF(
-		path=r"C:\Users\BekishEP\Desktop\Новая папка\Реализация\RAG modification\files",
-		t="энергетич теплов энерг"
+		path=r"",
+		t=""
 	)
 
 	pprint(tf_idf.tfidf, sort_dicts=False)

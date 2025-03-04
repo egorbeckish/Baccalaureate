@@ -127,8 +127,8 @@ class BM25:
 
 if __name__ == "__main__":
 	bm25 = BM25(
-		path=r"C:\Users\BekishEP\Desktop\Новая папка\Реализация\RAG modification\files\tmp",
-		q="четыре шоссе"
+		path=r"",
+		q=""
 	)
 
 	pprint(bm25.bm25)
