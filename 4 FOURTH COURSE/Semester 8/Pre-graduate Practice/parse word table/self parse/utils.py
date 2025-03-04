@@ -76,8 +76,10 @@ def open_docx(path: str) -> Document:
 
 
 def get_tables(docx: Document) -> list:
-    tables = docx.tables
+    return docx.tables
 
+
+def get_table_parse(tables: list) -> None:
     parse_table = []
     for i in range(len(tables) - 1):
         current = layers(tables[i])
@@ -87,9 +89,9 @@ def get_tables(docx: Document) -> list:
         if _next[0] in current[1]:
             current = list(current)
             current[1] += _next[1:][0]
-            tables.pop(i + 1)
+            # tables.pop(i + 1)
 
-        # В итоговом варианте данную проверку убрать!!!
+        # В итоговом варианте данную проверку убрать!!! (оставить только current[1].pop(index))
         if index:
             current[1].pop(index)
         parse_table += [current]
@@ -97,12 +99,7 @@ def get_tables(docx: Document) -> list:
     return parse_table
 
 
-def show_parse_table(table: list[list[str], list[list[str]]]=None, tables: list[list[list[str], list[list[str]]]]=None) -> None:
-    for table in tables:
-        print(table[0], table[1])
-
-
-def get_table(tables: list, index: int=None) -> list:
+def get_table(tables: list, index: int | slice=None) -> list:
     if index:
         return tables[index]
 
