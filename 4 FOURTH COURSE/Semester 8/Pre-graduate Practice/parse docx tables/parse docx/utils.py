@@ -111,19 +111,36 @@ def get_table(tables: list, index: int | slice=None) -> list:
     return tables 
 
 
-def find_gauss(data: list[list[str]]) -> None:
+def find_gauss(data: list[list[str]]) -> int:
     for i, row in enumerate(data):
         row_isdigit: list[bool] = list(map(lambda x: x.isdigit(), row))
         if all(row_isdigit):
             length_row: int = len(row)
             if sum(map(int, row)) == (length_row * (length_row + 1)) / 2 and length_row == len(set(row)):
                 return i
-            
+
+
+def delete_gauss(data: list[list[str]]) -> None:
+    index: int = find_gauss(data)
+    if index == None:
+        return
     
+    match data.count(data[index]):
+        case 1:
+            data.pop(index)
+        
+        case _:
+            value: list[str] = data[index]
+            while value in data:
+                index = data.index(value)
+                data.pop(index)
+                # if data.count(value) == 1:
+                #     break
 
 def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
     title: list[str] = [cell.text for cell in table.rows[0].cells]
     data: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
+    # delete_gauss(data)
 
     return title, data
 
@@ -147,3 +164,7 @@ def show_table(title: list[str]=None, data: list[list[str]]=None, tables=None) -
 
 def write_table_to_txt(table: tabulate) -> None:
     open('table.txt', 'a+', encoding='utf-8').write(table + '\n\n\n')
+
+
+def image_table(index: int) -> Image:
+    return Image.open(fr'files/image/table{index + 1}.png')
