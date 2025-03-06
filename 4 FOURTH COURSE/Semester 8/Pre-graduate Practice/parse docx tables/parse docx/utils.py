@@ -79,29 +79,48 @@ def get_tables(docx: Document) -> list:
     return docx.tables
 
 
-def get_table_parse(tables: list) -> None:
-    parse_table = []
-    length_before = len(tables)
-    for i in range(len(tables) - 1):
-        current = layers(tables[i])
-        _next = layers(tables[i + 1])
-        index = find_gauss(current[1])
+def get_correct_tables(tables: list) -> None:
+    index_delete_table = []
 
-        if _next[0] in current[1]:
-            current = list(current)
-            current[1] += _next[1:][0]
-            tables.pop(i + 1)
+    for i in range(len(tables)):
+        title_current_table, data_current_table = layers(tables[i])
+        new_table = [tables[i]]
+        for j in range(i + 1, len(tables)):
+            title_next_table, data_next_table = layers(tables[j])
 
-        # В итоговом варианте данную проверку убрать!!! (оставить только current[1].pop(index))
-        if index:
-            current[1].pop(index)
-        parse_table += [current]
+            if title_next_table not in [data_current_table[0], title_current_table]:
+                break
+
+            new_table += [tables[j]]
+            index_delete_table += [j]
+
+        if len(new_table) > 1:
+            tables[i] = new_table
     
-    length_after = len(tables)
-    if length_after == length_before:
-        parse_table += [layers(tables[-1])]
+    print(index_delete_table)
+            
+    # parse_table = []
+    # length_before = len(tables)
+    # for i in range(len(tables) - 1):
+    #     current = layers(tables[i])
+    #     _next = layers(tables[i + 1])
+    #     index = find_gauss(current[1])
 
-    return parse_table
+    #     if _next[0] in current[1]:
+    #         current = list(current)
+    #         current[1] += _next[1:][0]
+    #         tables.pop(i + 1)
+
+    #     # В итоговом варианте данную проверку убрать!!! (оставить только current[1].pop(index))
+    #     if index:
+    #         current[1].pop(index)
+    #     parse_table += [current]
+    
+    # length_after = len(tables)
+    # if length_after == length_before:
+    #     parse_table += [layers(tables[-1])]
+
+    # return parse_table
 
 
 def get_table(tables: list, index: int | slice=None) -> list:
@@ -160,6 +179,10 @@ def show_table(title: list[str]=None, data: list[list[str]]=None, tables=None) -
             showindex=False
         )
     )
+
+
+def table_to_tabulate(title: list[str], data: list[list[str]]) -> tabulate:
+    return tabulate(data, headers=title, tablefmt="simple_grid", showindex=False)
 
 
 def write_table_to_txt(table: tabulate) -> None:

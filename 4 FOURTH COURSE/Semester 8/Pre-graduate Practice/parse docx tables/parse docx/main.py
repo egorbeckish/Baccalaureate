@@ -1,10 +1,9 @@
 from utils import *
 
 
-docx: Document = open_docx('doc.docx')
+docx: Document = open_docx('files/docx/doc.docx')
 tables = get_tables(docx)
-tables_parse = get_table_parse(tables)
-show_table(tables=tables_parse)
+get_correct_tables(tables)
 
 
 # table = get_table(tables, 3)
