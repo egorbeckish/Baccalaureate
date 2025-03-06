@@ -49,26 +49,47 @@ def get_intervals(interval: list[list[int]]) -> None:
 	# 	interval[i]: list = row_index
 
 
-    intervals: list[list[int]] = [[] for _ in range(len(interval))]
-    for i, row in enumerate(interval):
-        index_row: list[int] = []
-        for j in range(len(row) - 1):
-            current: int = row[j]
-            _next: int = row[j + 1]
+    # intervals: list[list[int]] = [[] for _ in range(len(interval))]
+    # for i, row in enumerate(interval):
+    #     index_row: list[int] = []
+    #     for j in range(len(row) - 1):
+    #         current: int = row[j]
+    #         _next: int = row[j + 1]
 
-            if _next - current == 1:
-                if not index_row:
-                    index_row += [current]
+    #         if _next - current == 1:
+    #             if not index_row:
+    #                 index_row += [current]
 
-            else:
-                index_row += [current]
-                intervals[i] += [index_row]
-                index_row: list[int] = []
+    #         else:
+    #             index_row += [current]
+    #             intervals[i] += [index_row]
+    #             index_row: list[int] = []
 
-            if j + 1 == len(row) - 1:
-                intervals[i] += [index_row + [row[j + 1]]]
+    #         if j + 1 == len(row) - 1:
+    #             intervals[i] += [index_row + [row[j + 1]]]
 
-        interval[i] = intervals[i]
+    #     interval[i] = intervals[i]
+
+    _interval: list[int] = []
+    new_interval: list[list[int]] = []
+    for i in range(len(interval) - 1):
+        current = interval[i]
+        _next = interval[i + 1]
+        if _next - current == 1:
+            if not _interval:
+                _interval += [current]
+                start = i
+        
+        else:
+            _interval += [current]
+            new_interval += [_interval]
+            _interval: list[int] = []
+        
+        if i + 1 == len(interval) - 1:
+            new_interval += [_interval + [interval[i + 1]]]
+    
+    print(new_interval)
+
 
 
 def open_docx(path: str) -> Document:
@@ -79,14 +100,18 @@ def get_tables(docx: Document) -> list:
     return docx.tables
 
 
+def delete_tables(tables, index) -> None:
+    pass
+
+
 def get_correct_tables(tables: list) -> None:
     index_delete_table = []
 
     for i in range(len(tables)):
         title_current_table, data_current_table = layers(tables[i])
-        new_table = [tables[i]]
+        new_table: list[docx] = [tables[i]]
         for j in range(i + 1, len(tables)):
-            title_next_table, data_next_table = layers(tables[j])
+            title_next_table, _ = layers(tables[j])
 
             if title_next_table not in [data_current_table[0], title_current_table]:
                 break
@@ -97,7 +122,8 @@ def get_correct_tables(tables: list) -> None:
         if len(new_table) > 1:
             tables[i] = new_table
     
-    print(index_delete_table)
+    index_delete_table = sorted(set(index_delete_table))
+    print(index_delete_table, get_intervals(index_delete_table))
             
     # parse_table = []
     # length_before = len(tables)
