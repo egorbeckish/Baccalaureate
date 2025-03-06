@@ -1,3 +1,6 @@
+import docx.table
+import docx.table
+import docx.table
 from library import *
 
 
@@ -78,7 +81,6 @@ def get_intervals(interval: list[list[int]]) -> None:
         if _next - current == 1:
             if not _interval:
                 _interval += [current]
-                start = i
         
         else:
             _interval += [current]
@@ -96,10 +98,10 @@ def open_docx(path: str) -> Document:
 
 
 def get_tables(docx: Document) -> list:
-    return docx.tables
+    return get_correct_tables(docx.tables)
 
 
-def delete_tables(tables: list[docx], index: list[int]) -> None:
+def delete_tables(tables: list[docx.table], index: list[int]) -> list[docx.table]:
     diff: int = None
     for i, del_index in enumerate(index):
         if len(del_index) == 2:
@@ -111,16 +113,21 @@ def delete_tables(tables: list[docx], index: list[int]) -> None:
             else:
                 previously_index: list[int] = index[i - 1]
                 if len(previously_index) == 1:
-                    diff += 1
+                    if not diff:
+                        diff: int = del_index[1] - del_index[0]
+                    else:
+                        diff += 1
+
                 del_index: list[int] = [x - diff for x in del_index]
                 diff += del_index[1] - del_index[0]
-                tables: list[docx] = tables[:del_index[0]] + tables[del_index[1]:]
+                tables: list[docx.table] = tables[:del_index[0]] + tables[del_index[1]:]
 
         else:
             if not diff:
                 if not i:
                     tables.pop(del_index[0])
                 else:
+                    diff: int = 1
                     tables.pop(del_index[0] - i)
             
             else:
@@ -132,13 +139,15 @@ def delete_tables(tables: list[docx], index: list[int]) -> None:
                     tables.pop(del_index[0] - diff - 1)
                     diff += 1
 
+    return tables
+
 
 def get_correct_tables(tables: list) -> None:
     index_delete_table = []
 
     for i in range(len(tables)):
         title_current_table, data_current_table = layers(tables[i])
-        new_table: list[docx] = [tables[i]]
+        new_table: list[docx.table] = [tables[i]]
         for j in range(i + 1, len(tables)):
             title_next_table, _ = layers(tables[j])
 
@@ -152,31 +161,17 @@ def get_correct_tables(tables: list) -> None:
             tables[i] = new_table
     
     index_delete_table = sorted(set(index_delete_table))
-    print(index_delete_table, get_intervals(index_delete_table))
+    return delete_tables(tables, get_intervals(index_delete_table))
 
-            
-    # parse_table = []
-    # length_before = len(tables)
-    # for i in range(len(tables) - 1):
-    #     current = layers(tables[i])
-    #     _next = layers(tables[i + 1])
-    #     index = find_gauss(current[1])
 
-    #     if _next[0] in current[1]:
-    #         current = list(current)
-    #         current[1] += _next[1:][0]
-    #         tables.pop(i + 1)
+def join_tables(tables: list[docx.table]) -> None:
+    for i in range(len(tables)):
+        if not i:
+            title, data = layers(tables[i])
+        else:
+            data += layers(tables[i])[1]
 
-    #     # В итоговом варианте данную проверку убрать!!! (оставить только current[1].pop(index))
-    #     if index:
-    #         current[1].pop(index)
-    #     parse_table += [current]
-    
-    # length_after = len(tables)
-    # if length_after == length_before:
-    #     parse_table += [layers(tables[-1])]
-
-    # return parse_table
+    return title, data
 
 
 def get_table(tables: list, index: int | slice=None) -> list:
@@ -193,6 +188,7 @@ def find_gauss(data: list[list[str]]) -> int:
             length_row: int = len(row)
             if sum(map(int, row)) == (length_row * (length_row + 1)) / 2 and length_row == len(set(row)):
                 return i
+                data.pop(i)
 
 
 def delete_gauss(data: list[list[str]]) -> None:
@@ -212,15 +208,26 @@ def delete_gauss(data: list[list[str]]) -> None:
                 # if data.count(value) == 1:
                 #     break
 
+
 def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
+    if isinstance(table, list):
+        list_layers = []
+        for _table in table:
+            if not isinstance(_table, list):
+                list_layers += [layers(_table)]
+            else:
+                list_layers += [join_tables(_table)]
+        
+        return list_layers
+
     title: list[str] = [cell.text for cell in table.rows[0].cells]
     data: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
-    # delete_gauss(data)
 
     return title, data
 
 
 def show_table(title: list[str]=None, data: list[list[str]]=None, tables=None) -> None:
+    # return
     if tables:
         for table in tables:
             show_table(table[0], table[1])

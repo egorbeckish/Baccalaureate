@@ -3,9 +3,6 @@ from utils import *
 
 docx: Document = open_docx('files/docx/doc.docx')
 tables = get_tables(docx)
-get_correct_tables(tables)
-
-
-# table = get_table(tables, 3)
-# title, data = layers(table)
-# show_table(title, data)
+tables = layers(tables)
+for table in tables:
+    write_table_to_txt(table_to_tabulate(*table))
