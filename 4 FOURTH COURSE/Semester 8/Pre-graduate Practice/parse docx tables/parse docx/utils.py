@@ -88,8 +88,7 @@ def get_intervals(interval: list[list[int]]) -> None:
         if i + 1 == len(interval) - 1:
             new_interval += [_interval + [interval[i + 1]]]
     
-    print(new_interval)
-
+    return new_interval
 
 
 def open_docx(path: str) -> Document:
@@ -100,8 +99,38 @@ def get_tables(docx: Document) -> list:
     return docx.tables
 
 
-def delete_tables(tables, index) -> None:
-    pass
+def delete_tables(tables: list[docx], index: list[int]) -> None:
+    diff: int = None
+    for i, del_index in enumerate(index):
+        if len(del_index) == 2:
+            del_index[1] += 1
+            if not i:
+                diff: int = del_index[1] - del_index[0]
+                tables = tables[:del_index[0]] + tables[del_index[1]:]
+            
+            else:
+                previously_index: list[int] = index[i - 1]
+                if len(previously_index) == 1:
+                    diff += 1
+                del_index: list[int] = [x - diff for x in del_index]
+                diff += del_index[1] - del_index[0]
+                tables: list[docx] = tables[:del_index[0]] + tables[del_index[1]:]
+
+        else:
+            if not diff:
+                if not i:
+                    tables.pop(del_index[0])
+                else:
+                    tables.pop(del_index[0] - i)
+            
+            else:
+                previously_index: list[int] = index[i - 1]
+                if len(previously_index) == 2:
+                    tables.pop(del_index[0] - diff)
+                
+                else:
+                    tables.pop(del_index[0] - diff - 1)
+                    diff += 1
 
 
 def get_correct_tables(tables: list) -> None:
@@ -124,6 +153,7 @@ def get_correct_tables(tables: list) -> None:
     
     index_delete_table = sorted(set(index_delete_table))
     print(index_delete_table, get_intervals(index_delete_table))
+
             
     # parse_table = []
     # length_before = len(tables)
