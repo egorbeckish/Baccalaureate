@@ -1,3 +1,4 @@
+import docx.oxml
 from library import *
 
 
@@ -184,44 +185,7 @@ def find_gauss(data: list[list[str]]) -> int:
         if all(row_isdigit):
             length_row: int = len(row)
             if sum(map(int, row)) == (length_row * (length_row + 1)) / 2 and length_row == len(set(row)):
-                return i
                 data.pop(i)
-
-
-def delete_gauss(data: list[list[str]]) -> None:
-    index: int = find_gauss(data)
-    if index == None:
-        return
-    
-    match data.count(data[index]):
-        case 1:
-            data.pop(index)
-        
-        case _:
-            value: list[str] = data[index]
-            while value in data:
-                index = data.index(value)
-                data.pop(index)
-                # if data.count(value) == 1:
-                #     break
-
-
-def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
-    return [[cell.text for cell in row.cells] for row in table.rows]
-    if isinstance(table, list):
-        list_layers = []
-        for _table in table:
-            if not isinstance(_table, list):
-                list_layers += [layers(_table)]
-            else:
-                list_layers += [join_tables(_table)]
-        
-        return list_layers
-
-    title: list[str] = [cell.text for cell in table.rows[0].cells]
-    data: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows[1:]]
-
-    return title, data
 
 
 def show_table(title: list[str]=None, data: list[list[str]]=None, tables=None) -> None:
@@ -236,19 +200,51 @@ def show_table(title: list[str]=None, data: list[list[str]]=None, tables=None) -
         tabulate(
             data,
             headers=title,
-            tablefmt="simple_grid", 
+            tablefmt="rounded_grid",
+            stralign='center',
             showindex=False
         )
     )
 
 
-def table_to_tabulate(title: list[str], data: list[list[str]]) -> tabulate:
-    return tabulate(data, headers=title, tablefmt="simple_grid", showindex=False)
+def maxim_columns(data: list[list[str]]) -> int:
+    return max(map(lambda x: len(x), data))
 
 
-def write_table_to_txt(table: tabulate) -> None:
+def table_to_tabulate(title: list[str], data: list[list[str]]) -> str:
+    tmp_table: tabulate = tabulate(
+        data, 
+        [title], 
+        tablefmt="simple_grid", 
+        stralign='center', 
+        showindex=False
+    )
+    
+    right_edge: int = tmp_table.index('┐')
+    tmp_title: str = ''.join(['╭', '─' * (right_edge - 1), '╮'])
+    title: str = f'{tmp_title}\n{f'│{title:^{right_edge - 1}}│'}'
+    
+    left_edge: int = tmp_table.index('├')
+    count_columns: int = maxim_columns(data)
+    table: str = tmp_table[left_edge:].replace('┼', '┬', count_columns - 1)
+
+    return f'{title}\n{table}'
+
+
+def write_table_to_txt(table: str) -> None:
     open('table.txt', 'a+', encoding='utf-8').write(table + '\n\n\n')
 
 
 def image_table(index: int) -> Image:
     return Image.open(fr'files/image/table{index + 1}.png')
+
+
+def join_text_table(text_table, document) -> list[str]:
+    return '. '.join(map(lambda x: docx.text.paragraph.Paragraph(x, document).text.lower(), text_table))
+
+
+def text_table(table: docx.oxml.table, document) -> list[list[str]]:
+    table: docx.table.Table = docx.table.Table(table, document)
+    table: list[list[str]] = [[cell.text for cell in row.cells] for row in table.rows]
+    find_gauss(table)
+    return table
