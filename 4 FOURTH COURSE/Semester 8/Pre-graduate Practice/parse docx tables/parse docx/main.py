@@ -1,5 +1,3 @@
-import docx.oxml
-import docx.table
 from utils import *
 
 
