@@ -21,11 +21,3 @@ for i, el in enumerate(_body):
             title = join_text_table(_body[index_text_table:i], _docx)
             table = text_table(el, _docx)
             write_table_to_txt(table_to_tabulate(title, table))
-
-            
-
-
-# tables = get_tables(docx)
-# tables = layers(tables)
-# for table in tables:
-#     write_table_to_txt(table_to_tabulate(*table))
