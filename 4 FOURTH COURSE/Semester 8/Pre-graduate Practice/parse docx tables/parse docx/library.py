@@ -8,4 +8,4 @@ except ImportError:
     import os
     
     
-    os.system('python3 -m pip install --upgrade pip; pip install -r requirements.txt; timeout 5; clear; python main.py')
+    os.system('python3 -m pip install --upgrade pip; pip install -r requirements.txt; clear; python library.py; clear; python main.py')
