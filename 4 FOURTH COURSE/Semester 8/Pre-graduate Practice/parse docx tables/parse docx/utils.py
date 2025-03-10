@@ -1,6 +1,3 @@
-import docx.table
-import docx.table
-import docx.table
 from library import *
 
 
