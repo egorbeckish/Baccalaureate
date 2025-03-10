@@ -3,6 +3,8 @@ try:
     from docx import Document
     from tabulate import tabulate
     from PIL import Image
+    import os
+    import regex
 
 except ImportError:
     import os

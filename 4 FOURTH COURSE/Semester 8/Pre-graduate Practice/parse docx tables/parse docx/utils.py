@@ -207,6 +207,7 @@ def delete_gauss(data: list[list[str]]) -> None:
 
 
 def layers(table: docx.table) -> tuple[list[str], list[list[str]]]:
+    return [[cell.text for cell in row.cells] for row in table.rows]
     if isinstance(table, list):
         list_layers = []
         for _table in table:
