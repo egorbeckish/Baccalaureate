@@ -1,3 +1,6 @@
+from utils import *
+
+
 class ParseWordTable:
 
     def __init__(self, title: str, obj_table: docx.table.Table) -> None:

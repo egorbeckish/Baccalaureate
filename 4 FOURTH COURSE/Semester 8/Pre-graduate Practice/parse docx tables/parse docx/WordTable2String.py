@@ -1,3 +1,6 @@
+from ParseWordTable import *
+
+
 class WordTable2String:
 
     def __init__(self, path: str) -> None:

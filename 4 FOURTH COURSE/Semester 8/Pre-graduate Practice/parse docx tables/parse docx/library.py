@@ -2,9 +2,10 @@ try:
     import docx
     from docx import Document
     from tabulate import tabulate
-    from PIL import Image
     import os
     import regex
+
+    os.system('clear; python main.py')
 
 except ImportError:
     import os
