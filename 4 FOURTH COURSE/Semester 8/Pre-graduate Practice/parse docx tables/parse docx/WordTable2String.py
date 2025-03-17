@@ -38,7 +38,7 @@ class WordTable2String:
         for index, element in enumerate(self.__body):
             if isinstance(element, docx.oxml.text.paragraph.CT_P):
                 text: str = self.__convert_oxml_text_to_string(element)
-                regex_text: list[str] = regex.findall(r'таблиц[\w]\s[0-9]{1,}', text)
+                regex_text: list[str] = regex.findall(r'таблица\s[0-9]{1,}', text)
                 if regex_text:
                     if text == regex_text[0]:
                         index_title_table: int = index
