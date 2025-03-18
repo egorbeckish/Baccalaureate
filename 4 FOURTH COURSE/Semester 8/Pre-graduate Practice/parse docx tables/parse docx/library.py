@@ -4,6 +4,9 @@ try:
     from tabulate import tabulate
     import os
     import regex
+    from pdf2docx import Converter, parse
+    from docx.oxml.text.paragraph import CT_P
+    from docx.oxml.table import CT_Tbl
 
     os.system('clear; python main.py')
 

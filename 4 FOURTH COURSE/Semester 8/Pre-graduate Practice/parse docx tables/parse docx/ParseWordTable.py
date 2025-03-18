@@ -3,7 +3,7 @@ from utils import *
 
 class ParseWordTable:
 
-    def __init__(self, title: str, obj_table: docx.table.Table) -> None:
+    def __init__(self, title: str, obj_table: docx.table.Table | list[docx.table.Table]) -> None:
         self.__obj_table: docx.table.Table = obj_table
         self.__title: str = title
         self.__subtitles: list[list[str]] = self.__slice_obj_table[0]
