@@ -1,3 +1,6 @@
+from ParseWordTable import *
+
+
 class WordTable2String:
 
     def __init__(self, path: str) -> None:
@@ -11,7 +14,7 @@ class WordTable2String:
         self.__tables: dict[str: ParseWordTable] = dict()
         self.__table_to_string
 
-    
+
     @property
     def tables(self) -> list[str]:
         return self.__tables
@@ -19,7 +22,7 @@ class WordTable2String:
 
     def __open_docx(self, path: str) -> Document:
         return Document(path)
-    
+
 
     def __convert_oxml_text_to_string(self, oxml_text: CT_P) -> str:
         return docx.text.paragraph.Paragraph(oxml_text, self.__document).text.lower()
@@ -34,7 +37,7 @@ class WordTable2String:
         paragraph = tmp_doc.add_paragraph(title)
         return paragraph._element
 
-    
+
     def __convert_oxml_table_to_table(self, oxml_table: CT_Tbl) -> docx.table.Table:
         return docx.table.Table(oxml_table, self.__document)
 
@@ -48,7 +51,7 @@ class WordTable2String:
         format_title: list[str] = regex.findall(r'таблица\s[0-9]{1,}\.', title)
         if format_title:
             return title
-        
+
         tmp_title: str = regex.findall(r'таблица\s[0-9]{1,}', title)[0]
         tmp_text: str = regex.split(r'\s', regex.split(tmp_title, title)[-1])
         self.__delete_space(tmp_text)
@@ -65,25 +68,25 @@ class WordTable2String:
                 if sum(map(int, row)) == (length_row * (length_row + 1)) / 2 and length_row == len(set(row)):
                     return True
         return False
-    
+
 
     def __new_body(self, body) -> list[docx.oxml]:
-        
+
         new_body: list[docx.oxml] = []
         index_title_table: int | None = None
         unic_index_title: list[str] = []
-        
+
         for index, element in enumerate(body):
             if isinstance(element, CT_P):
                 text: str = self.__convert_oxml_text_to_string(element)
                 regex_text: list[str] = regex.findall(r'таблица\s[0-9]{1,}', text)
                 if regex_text:
                     index_title_table: int = index
-                    
+
             if isinstance(element, CT_Tbl):
                 table = self.__convert_oxml_table_to_table(element)
                 table: list[list[str]] = [[cell.text[::-1].replace(' ', '', 1)[::-1] for cell in row.cells] for row in table.rows]
-                
+
                 if 'ТИПОВЫЕ ТРЕБОВАНИЯ' in table[0][0] or len(table) <= 3:
                     continue
 
@@ -92,11 +95,11 @@ class WordTable2String:
                         title: str = self.__convert_oxml_text_to_string_title(body[index_title_table:index])
                         title: CT_P = self.__convert_string_to_oxml(title)
                         new_body += [title]
-                    
+
                     unic_index_title += [index_title_table]
-                
+
                 new_body += [element]
-        
+
         new_body: list[CT_P | CT_Tbl | list[CT_Tbl]] = self.__layers_table(new_body)
         return new_body
 
@@ -110,15 +113,15 @@ class WordTable2String:
             new_body += [body[index_paragraphs[i]]]
             if len(element) == 1:
                 new_body += element
-            
+
             else:
                 new_body += [element]
-        
+
         new_body += [body[index_paragraphs[-1]]]
         element: list[CT_Tbl] = body[index_paragraphs[-1] + 1:]
         if len(element) == 1:
             new_body += element
-            
+
         else:
             new_body += [element]
 
@@ -133,7 +136,7 @@ class WordTable2String:
                 # regex_text: list[str] = regex.findall(r'таблица\s[0-9]{1,}', text)
                 # if regex_text:
                 #     index_title_table: int = index
-            
+
             if isinstance(element, CT_Tbl) or isinstance(element, list):
                 title: str = self.__format_title(text)
 
@@ -144,7 +147,7 @@ class WordTable2String:
                     element: docx.table.Table = self.__convert_oxml_table_to_table(element)
 
                 self.__tables[title] = ParseWordTable(title, element)
-                
+
                 # if index_title_table:
                 #     title: str = self.__convert_oxml_text_to_string_title(self.__body[index_title_table:index])
                 #     element: docx.table.Table = self.__convert_oxml_table_to_table(element)

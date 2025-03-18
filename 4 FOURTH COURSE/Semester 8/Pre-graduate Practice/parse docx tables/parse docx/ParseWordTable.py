@@ -12,12 +12,12 @@ class ParseWordTable:
         self.__rows: int = self.__table_rows
         self.__columns: int = self.__table_columns
 
-    
+
     @property
     def title(self) -> str:
         return self.__title
 
-    
+
     @property
     def subtitles(self) -> list[list[str]]:
         return self.__subtitles
@@ -27,7 +27,7 @@ class ParseWordTable:
     def table(self) -> list[list[str]]:
         return self.__table
 
-    
+
     @property
     def fulltable(self) -> list[list[str]]:
         return self.__fulltable
@@ -36,7 +36,7 @@ class ParseWordTable:
     @property
     def rows(self) -> int:
         return self.__rows
-    
+
 
     @property
     def columns(self) -> int:
@@ -52,10 +52,56 @@ class ParseWordTable:
                     return i
                     table.pop(i)
                     return
+
+
+    def __delete_space(self, data: list[str]) -> None:
+        while '' in data:
+            data.pop(data.index(''))
+
+
+    def __correct_data(self, table: list[list[str]]) -> None:
+        table.pop(-1)
+
+        for i, row in enumerate(table):
+            row = list(map(lambda x: x.split(' '), row))
+            for j in range(len(row)):
+                self.__delete_space(row[j])
+                row[j] = ' '.join(row[j])
+            
+            table[i] = row
+
     
+    def __join_previously_row(self, table: list[list[str]], join_row: list[list[str]]) -> None:
+        if join_row[0][0] == '':
+            for i, el in enumerate(join_row[0]):
+                if el:
+                    table[-1][i] += join_row[0][i]
+
+            join_row.pop(0)
+
+
 
     @property
     def __slice_obj_table(self) -> tuple[list[list[str]], list[list[str]]]:
+        if isinstance(self.__obj_table, list):
+            layers_table: list[list[list[str]]] = []
+            
+            for i, table in enumerate(self.__obj_table):
+                data: list[list[str]] = ParseWordTable(self.__title, table).fulltable
+                self.__correct_data(data)
+
+                if not i:
+                    layers_table += data
+
+                else:
+                    index: int = self.__gauss(data)
+                    data: list[list[str]] = data[index + 1:]
+                    self.__join_previously_row(layers_table, data)
+                    layers_table += data
+            
+            index: int = self.__gauss(layers_table)
+            return layers_table[:index], layers_table[index + 1:] if index else layers_table[:1], layers_table[1:]
+
         table: list[list[str]] = [[cell.text for cell in row.cells] for row in self.__obj_table.rows]
         index: int = self.__gauss(table)
         return table[:index], table[index + 1:] if index else table[:1], table[1:]
@@ -64,8 +110,8 @@ class ParseWordTable:
     @property
     def __table_rows(self) -> int:
         return len(self.__fulltable) + 1
-    
-        
+
+
     @property
     def __table_columns(self) -> int:
         return max(map(lambda x: len(x), self.__table))
@@ -76,8 +122,8 @@ class ParseWordTable:
         tmp_table: str = tabulate(
             self.__fulltable,
             [self.__title],
-            tablefmt="simple_grid", 
-            stralign='center', 
+            tablefmt="simple_grid",
+            stralign='center',
             showindex=False,
         )
 
