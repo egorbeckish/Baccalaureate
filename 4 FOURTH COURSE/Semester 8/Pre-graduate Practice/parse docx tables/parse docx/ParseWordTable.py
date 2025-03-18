@@ -68,9 +68,9 @@ class ParseWordTable:
             row = list(map(lambda x: x.split(' '), row))
             for j in range(len(row)):
                 self.__delete_space(row[j])
-                row[j] = ' '.join(row[j])
+                row[j]: str = ' '.join(row[j])
             
-            table[i] = row
+            table[i]: list[str] = row
 
     
     def __join_previously_row(self, table: list[list[str]], join_row: list[list[str]]) -> None:
