@@ -1,6 +1,3 @@
-from utils import *
-
-
 class ParseWordTable:
 
     def __init__(self, title: str, obj_table: docx.table.Table | list[docx.table.Table]) -> None:
@@ -9,6 +6,7 @@ class ParseWordTable:
         self.__subtitles: list[list[str]] = self.__slice_obj_table[0]
         self.__table: list[list[str]] = self.__slice_obj_table[1]
         self.__fulltable: list[list[str]] = self.__subtitles + self.__table
+        self.__correct_data(self.__fulltable)
         self.__rows: int = self.__table_rows
         self.__columns: int = self.__table_columns
 
@@ -88,7 +86,7 @@ class ParseWordTable:
             
             for i, table in enumerate(self.__obj_table):
                 data: list[list[str]] = ParseWordTable(self.__title, table).fulltable
-                self.__correct_data(data)
+                # self.__correct_data(data)
 
                 if not i:
                     layers_table += data
