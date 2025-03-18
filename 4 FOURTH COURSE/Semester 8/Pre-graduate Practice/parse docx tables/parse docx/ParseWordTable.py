@@ -61,7 +61,8 @@ class ParseWordTable:
 
 
     def __correct_data(self, table: list[list[str]]) -> None:
-        table.pop(-1)
+        if table[0] == table[-1]:
+            table.pop(-1)
 
         for i, row in enumerate(table):
             row = list(map(lambda x: x.split(' '), row))
