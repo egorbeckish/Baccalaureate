@@ -1,6 +1,3 @@
-from ParseWordTable import *
-
-
 class WordTable2String:
 
     def __init__(self, path: str) -> None:
@@ -71,9 +68,11 @@ class WordTable2String:
     
 
     def __new_body(self, body) -> list[docx.oxml]:
+        
         new_body: list[docx.oxml] = []
         index_title_table: int | None = None
         unic_index_title: list[str] = []
+        
         for index, element in enumerate(body):
             if isinstance(element, CT_P):
                 text: str = self.__convert_oxml_text_to_string(element)
@@ -137,6 +136,13 @@ class WordTable2String:
             
             if isinstance(element, CT_Tbl) or isinstance(element, list):
                 title: str = self.__format_title(text)
+
+                if isinstance(element, list):
+                    for i, el in enumerate(element):
+                        element[i]: docx.table.Table = self.__convert_oxml_table_to_table(el)
+                else:
+                    element: docx.table.Table = self.__convert_oxml_table_to_table(element)
+
                 self.__tables[title] = ParseWordTable(title, element)
                 
                 # if index_title_table:
