@@ -46,7 +46,7 @@ class ParseWordTable:
 
     def __gauss(self, table: list[list[str]]) -> int:
         for i, row in enumerate(table):
-            row_isdigit: list[bool] = map(lambda x: x.isdigit(), row)
+            row_isdigit: list[bool] = map(lambda x: x.split()[0].isdigit() if x else False, row)
             if all(row_isdigit):
                 length_row: int = len(row)
                 if sum(map(int, row)) == (length_row * (length_row + 1)) / 2 and length_row == len(set(row)):
@@ -69,10 +69,10 @@ class ParseWordTable:
             for j in range(len(row)):
                 self.__delete_space(row[j])
                 row[j]: str = ' '.join(row[j])
-            
+
             table[i]: list[str] = row
 
-    
+
     def __join_previously_row(self, table: list[list[str]], join_row: list[list[str]]) -> None:
         if join_row[0][0] == '':
             for i, el in enumerate(join_row[0]):
@@ -82,27 +82,24 @@ class ParseWordTable:
             join_row.pop(0)
 
 
-
     @property
     def __slice_obj_table(self) -> tuple[list[list[str]], list[list[str]]]:
         if isinstance(self.__obj_table, list):
             layers_table: list[list[list[str]]] = []
-            
-            for i, table in enumerate(self.__obj_table):
-                data: list[list[str]] = ParseWordTable(self.__title, table).fulltable
-                # self.__correct_data(data)
 
+            for i, table in enumerate(self.__obj_table):
+                data: list[list[str]] = ParseWordTable(self.__title, table)
                 if not i:
-                    layers_table += data
+                    layers_table += data.fulltable
 
                 else:
-                    index: int = self.__gauss(data)
-                    data: list[list[str]] = data[index + 1:]
+                    data: list[list[str]] = data.table
                     self.__join_previously_row(layers_table, data)
                     layers_table += data
-            
+
             index: int = self.__gauss(layers_table)
             return layers_table[:index], layers_table[index + 1:] if index else layers_table[:1], layers_table[1:]
+
 
         table: list[list[str]] = [[cell.text for cell in row.cells] for row in self.__obj_table.rows]
         index: int = self.__gauss(table)
