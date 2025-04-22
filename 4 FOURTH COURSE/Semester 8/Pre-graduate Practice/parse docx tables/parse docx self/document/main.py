@@ -134,6 +134,17 @@ join_element_rows(table, rows)
 # print(table[0])
 
 
+def sep_rows(index_sep):
+    return f"\n├{'┼'.join(list(map(lambda x: '─' * (x - 1), index_sep)))}┤\n"
+
+
+def sep_begin_row(index_sep: list[int]) -> str:
+    return f"├{'┬'.join(list(map(lambda x: '─' * (x - 1), index_sep)))}┤"
+
+def sep_last_row(index_sep: list[int]) -> str:
+    return f"└{'┴'.join(list(map(lambda x: '─' * (x - 1), index_sep)))}┘"
+
+
 def index_sep_rows(row, columns):
 	index_sep = []
 	count = 0
@@ -147,4 +158,22 @@ def index_sep_rows(row, columns):
 	return index_sep
 
 index_sep = index_sep_rows(table[0], columns)
-print(index_sep)
+# print(index_sep)
+# print(f"{sep_begin_row(index_sep)}\n{f'{sep_rows(index_sep)}'.join(table)}\n{sep_last_row(index_sep)}")
+
+for element in body:
+    if isinstance(element, omxl_paragraph):
+        text = Paragraph(element, document).text
+        if text:
+            print(text)
+            print()
+    else:
+        table = Table(element, document)
+        table = [[' '.join(cell.text.split()) for cell in row.cells] for row in table.rows]
+        rows = len(table)
+        columns = len(table[0])
+        format_columns(table, rows, columns)
+        join_element_rows(table, rows)
+        index_sep = index_sep_rows(table[0], columns)
+        print(f"{sep_begin_row(index_sep)}\n{f'{sep_rows(index_sep)}'.join(table)}\n{sep_last_row(index_sep)}")
+        print()
