@@ -79,11 +79,11 @@ def sep_rows(index_sep):
 	return f"\n├{'┼'.join(list(map(lambda x: '─' * (x - 1), index_sep)))}┤\n"
 
 
-def sep_begin_row(index_sep: list[int]) -> str:
+def sep_begin_row(index_sep):
 	return f"├{'┬'.join(list(map(lambda x: '─' * (x - 1), index_sep)))}┤"
 
 
-def sep_last_row(index_sep: list[int]) -> str:
+def sep_last_row(index_sep):
 	return f"└{'┴'.join(list(map(lambda x: '─' * (x - 1), index_sep)))}┘"
 
 
@@ -109,31 +109,6 @@ def to_string(title, element):
 	return format_rows(title, table, columns)
 
 
-def get_body(document):
-	return [element for element in document.element.body if isinstance(element, omxl_paragraph) or isinstance(element, omxl_table)]
-
-
-def correct_body(body, document):
-	_body = []
-	for i, element in enumerate(body):
-		if isinstance(element, omxl_paragraph):
-			text = convert_omxl_paragraph_to_text(element, document)
-			if text != '':
-				_body += [element]
-				if regex_title(text):
-					index_title = i
-					
-		else:
-			try:
-				if index_title:
-					_body += [element]
-
-			except:
-				continue
-
-	return _body
-
-
 def convert_omxl_paragraph_to_text(paragraph: omxl_paragraph, document: Document) -> str:
 	return ' '.join(Paragraph(paragraph, document).text.lower().split())
 
@@ -155,6 +130,32 @@ def convert_text_to_oxml_paragraph(text: str) -> omxl_paragraph:
 	tmp_document: Document = Document()
 	paragraph = tmp_document.add_paragraph(text)
 	return paragraph._element
+
+
+def get_body(document):
+	return [element for element in document.element.body if isinstance(element, omxl_paragraph) or isinstance(element, omxl_table)]
+
+
+def correct_body(body, document):
+    _body = []
+    index_title = None
+
+    for i, element in enumerate(body):
+        if isinstance(element, omxl_paragraph):
+            text = convert_omxl_paragraph_to_text(element, document)
+            if text:
+                if regex_title(text):
+                    index_title = i
+                
+                elif not index_title:
+                    _body += [element]
+        else:
+            if index_title:
+                title = convert_list_omxl_paragraph_to_text(body[index_title:i], document)
+                _body += [convert_text_to_oxml_paragraph(title), element]
+                index_title = None
+
+    return _body
 
 
 def merge(body, document):
@@ -180,9 +181,10 @@ def merge(body, document):
 
 
 def main():
-	document = open_docx('test1_tables.docx')
-	# document = open_docx('pdf.docx')
-	body = get_body(document)
-	body = correct_body(body, document)
+    # document = open_docx('test1_tables.docx')
+    document = open_docx('doc.docx')
+    # document = open_docx('pdf.docx')
+    body = get_body(document)
+    body = correct_body(body, document)
 
-	print(merge(body, document))
+    print(merge(body, document))
