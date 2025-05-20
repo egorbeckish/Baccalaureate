@@ -166,10 +166,44 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ALuY-3sxKJ01NJLbRkeP" name="последовательности">
-    <mxGraphModel dx="1034" dy="570" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="591" dy="726" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-7" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="151" y="-296" width="22" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-10" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="164" y="3" as="sourcePoint" />
+            <mxPoint x="162" y="-263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-12" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="YS2_epf8ITkpqB_OJ9Fx-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="164" y="3" as="sourcePoint" />
+            <mxPoint x="162" y="-263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-11" value="Сотрудник" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="124" y="-259" width="76" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="273" y="4" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-13" value="UI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="247" y="-284.5" width="55" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;dashed=1;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="386.5" y="7.714285714285666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-18" value="GigaChat API" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="-288" width="73" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
