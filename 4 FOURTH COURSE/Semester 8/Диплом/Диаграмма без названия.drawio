@@ -179,18 +179,17 @@
             <mxPoint x="162" y="-263" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-12" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="YS2_epf8ITkpqB_OJ9Fx-11">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="164" y="3" as="sourcePoint" />
-            <mxPoint x="162" y="-263" as="targetPoint" />
+        <mxCell id="YS2_epf8ITkpqB_OJ9Fx-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="162" y="58" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YS2_epf8ITkpqB_OJ9Fx-11" value="Сотрудник" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="124" y="-259" width="76" height="26" as="geometry" />
+          <mxGeometry x="124" y="-252" width="76" height="26" as="geometry" />
         </mxCell>
         <mxCell id="YS2_epf8ITkpqB_OJ9Fx-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-13">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="273" y="4" as="targetPoint" />
+            <mxPoint x="273" y="55" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YS2_epf8ITkpqB_OJ9Fx-13" value="UI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -198,7 +197,7 @@
         </mxCell>
         <mxCell id="YS2_epf8ITkpqB_OJ9Fx-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;dashed=1;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-18">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="386.5" y="7.714285714285666" as="targetPoint" />
+            <mxPoint x="386" y="50" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YS2_epf8ITkpqB_OJ9Fx-18" value="GigaChat API" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
