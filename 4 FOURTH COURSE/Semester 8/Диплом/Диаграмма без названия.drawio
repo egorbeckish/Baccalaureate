@@ -166,7 +166,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="последовательности" id="_91WyM8L1EmOm-OSOjKA">
-    <mxGraphModel dx="862" dy="875" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="492" dy="671" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -214,7 +214,7 @@
         <mxCell id="YS2_epf8ITkpqB_OJ9Fx-18" value="GigaChat API" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="433" y="-284.5" width="73" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-11" target="HsT6UTE3d-p-3G1jcc_n-2">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-11" target="HsT6UTE3d-p-3G1jcc_n-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="162" y="194" as="targetPoint" />
             <mxPoint x="162" y="-226" as="sourcePoint" />
@@ -224,10 +224,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-2" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-2" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="157" y="-218" width="10" height="381" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-13" target="HsT6UTE3d-p-3G1jcc_n-6">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-13" target="HsT6UTE3d-p-3G1jcc_n-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="275" y="214" as="targetPoint" />
             <mxPoint x="275" y="-261" as="sourcePoint" />
@@ -237,10 +237,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-6" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-6" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="302" y="-218" width="10" height="372" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;dashed=1;" edge="1" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-18" target="HsT6UTE3d-p-3G1jcc_n-8">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startFill=0;dashed=1;" parent="1" source="YS2_epf8ITkpqB_OJ9Fx-18" target="HsT6UTE3d-p-3G1jcc_n-8" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="386" y="186" as="targetPoint" />
             <mxPoint x="386" y="-258" as="sourcePoint" />
@@ -250,71 +250,89 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-8" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-8" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="464.5" y="-218" width="10" height="367" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-10" value="" style="endArrow=block;html=1;rounded=0;endFill=1;entryX=0;entryY=0.071;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-10" value="" style="endArrow=block;html=1;rounded=0;endFill=1;entryX=0;entryY=0.071;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="167" y="-206.04899999999998" as="sourcePoint" />
             <mxPoint x="302" y="-206.04899999999998" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-12" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;1: Вход в систему&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-12" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;1: Вход в систему&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="185.5" y="-229" width="100" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-13" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;" edge="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-13" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="464.5" y="-150" as="sourcePoint" />
             <mxPoint x="312.00000000000006" y="-150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-14" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;3: Возвращение токена&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-14" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;3: Возвращение токена&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="328" y="-174" width="127" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-15" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" edge="1" parent="1" target="HsT6UTE3d-p-3G1jcc_n-8">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-15" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" parent="1" target="HsT6UTE3d-p-3G1jcc_n-8" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="312" y="-183" as="sourcePoint" />
             <mxPoint x="447" y="-183" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-16" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;2: Получение токена&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="334.5" y="-207" width="114" height="26" as="geometry" />
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-16" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;2: Получить токен&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="341.5" y="-207" width="101" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-17" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-17" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="302" y="-123.269" as="sourcePoint" />
-            <mxPoint x="167" y="-123.269" as="targetPoint" />
+            <mxPoint x="302" y="-18.269000000000005" as="sourcePoint" />
+            <mxPoint x="167" y="-18.269000000000005" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-18" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;4: Отобразить чата&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="186" y="-148" width="107" height="26" as="geometry" />
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-18" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;4: Отобразить чата&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="186" y="-43" width="107" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-19" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-19" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="302" y="-79" as="sourcePoint" />
-            <mxPoint x="167" y="-79" as="targetPoint" />
+            <mxPoint x="302" y="26" as="sourcePoint" />
+            <mxPoint x="167" y="26" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-20" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;5: Отобразить&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;загрузку документов&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="183" y="-117" width="113" height="41" as="geometry" />
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-20" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;5: Отобразить&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;загрузку документов&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="183" y="-12" width="113" height="41" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-21" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-21" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="302" y="-22" as="sourcePoint" />
-            <mxPoint x="167" y="-22" as="targetPoint" />
+            <mxPoint x="302" y="83" as="sourcePoint" />
+            <mxPoint x="167" y="83" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-22" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;6: Отобразить&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;просмотр/удаление&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;документов&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="185" y="-74" width="109" height="55" as="geometry" />
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-22" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;6: Отобразить&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;просмотр/удаление&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;документов&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="185" y="31" width="109" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-23" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-23" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;entryX=1;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="302" y="29" as="sourcePoint" />
-            <mxPoint x="167" y="29" as="targetPoint" />
+            <mxPoint x="302" y="134" as="sourcePoint" />
+            <mxPoint x="167" y="134" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HsT6UTE3d-p-3G1jcc_n-24" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;7: Отображение&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;выход из системы&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="188" y="-12" width="102" height="41" as="geometry" />
+        <mxCell id="HsT6UTE3d-p-3G1jcc_n-24" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;7: Отображение&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;выход из системы&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="188" y="93" width="102" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="1Ytj5OVvYSEI8Q1KWe0s-2" value="" style="endArrow=block;html=1;rounded=0;endFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="312" y="-98.04899999999998" as="sourcePoint" />
+            <mxPoint x="464.5" y="-98.04899999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1Ytj5OVvYSEI8Q1KWe0s-3" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;4: Получить&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;документы&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;из хранилища&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="325" y="-136" width="126" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="1Ytj5OVvYSEI8Q1KWe0s-5" value="" style="endArrow=block;html=1;rounded=0;endFill=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="464.49999999999994" y="-55" as="sourcePoint" />
+            <mxPoint x="312" y="-55" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1Ytj5OVvYSEI8Q1KWe0s-6" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;5: Возвращение документов&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;из хранилища&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="315.99999999999994" y="-93" width="152" height="41" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
