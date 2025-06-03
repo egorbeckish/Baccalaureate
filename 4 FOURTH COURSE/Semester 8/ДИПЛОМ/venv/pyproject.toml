@@ -1,0 +1,22 @@
+[project]
+name = "venv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain==0.3.25",
+    "langchain-community==0.3.24",
+    "langchain-gigachat==0.3.10",
+    "langchain-ollama==0.3.3",
+    "langchain-text-splitters==0.3.8",
+    "pandas==2.2.3",
+    "psutil==7.0.0",
+    "psycopg2==2.9.10",
+    "pypdf==5.5.0",
+    "python-docx==1.1.2",
+    "python-pptx==1.0.2",
+    "requests==2.32.3",
+    "streamlit==1.45.1",
+    "uv==0.7.8",
+]

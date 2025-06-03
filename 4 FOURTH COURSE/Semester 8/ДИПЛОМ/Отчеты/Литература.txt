@@ -1,0 +1,9 @@
+[1] - https://www.etheroneph.com/files/can_the_machine_think.pdf
+[2] - https://ru.wikipedia.org/wiki/Элиза_(программа)
+[3] - https://en.wikipedia.org/wiki/Rule-based_machine_learning
+https://developers.sber.ru/docs/ru/policies/gigachat-agreement/general
+
+CNN - https://www.iro.umontreal.ca/~pift6080/H09/documents/papers/sparse/matsugo_etal_face_expression_conv_nnet.pdf
+RNN - https://people.idsia.ch/~juergen/tpami_2008.pdf
+GNN - https://arxiv.org/pdf/1812.08434
+Transformer - https://arxiv.org/pdf/1706.03762
