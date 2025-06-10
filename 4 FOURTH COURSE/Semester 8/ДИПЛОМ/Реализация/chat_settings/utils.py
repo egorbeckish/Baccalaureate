@@ -155,6 +155,18 @@ def summarize_text(prompt, model, file_name, file_format):
 	)
 
 	documents = loader.load()
+
+	text_splitter = RecursiveCharacterTextSplitter(
+		chunk_size=2048,
+    	chunk_overlap=0,
+    	length_function=len,
+    	is_separator_regex=False,
+	)
+
+	documents = text_splitter.split_documents(documents)
+
+	print(llm)
+	print(documents)
 	
 
 	prompt = PromptTemplate(
