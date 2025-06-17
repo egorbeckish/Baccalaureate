@@ -11,7 +11,7 @@ st.title(
 
 if not st.session_state.files and not st.session_state.knowledge_files:
 	st.warning(
-		'БЗ пуста! Необходимо загрузить документы. Перейдите в раздел "Документы/база знаний" -> "Загрузка документов"',
+		'БД пуста! Необходимо загрузить документы. Перейдите в раздел "Документы/база знаний" -> "Загрузка документов"',
 		icon='⚠️'
 	)
 
@@ -22,6 +22,12 @@ else:
 		hide_index=True,
 		num_rows='dynamic',
 	)
+
+	# recieved_files = st.data_editor(
+	# 	{'Название файла': [], 'Формат': [], 'Расположение': []},
+	# 	hide_index=True,
+	# 	num_rows='dynamic',
+	# )
 
 	delete_cols = st.columns(3)
 	with delete_cols[0]:

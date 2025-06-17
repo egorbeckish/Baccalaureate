@@ -23,12 +23,12 @@ with setting[0]:
 	select_search = st.radio(
 		'Способ нахождения', 
 		[
-			'БЗ', 
+			'БД', 
 			'Название документа', 
 			'Поиск в интернете'
 		], 
 		horizontal=True,
-		help='БЗ - База знаний; Название документа - определенный документ, имеющийся в хранилище'
+		help='БД - База документов; Название документа - определенный документ, имеющийся в хранилище'
 	)
 
 with setting[1]:
@@ -76,7 +76,7 @@ if prompt:
 	send_message(prompt, 'user')
 
 	match select_search:
-		case 'БЗ':
+		case 'БД':
 			knowledges = '\n'.join(st.session_state.files_name)
 			response = search_file(
 				knowledges,

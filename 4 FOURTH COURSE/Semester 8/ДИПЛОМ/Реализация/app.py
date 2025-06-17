@@ -7,15 +7,15 @@ pages = st.navigation(
 			st.Page(r'main.py', title='Главная', default=True)
 		],
 
-		'СИПвКБЗ': [
+		'ПКИПвКД': [
 			st.Page(r'chat_settings/chat.py', title='Чат', icon='🗨️'),
 			st.Page(r'chat_settings/close_chat.py', title='Закрыть чат', icon='🔒')
 		],
 
-		'Документы/база знаний': [
+		'Документы': [
 			st.Page(r'docs_settings/upload_files.py', title='Загрузка документов', icon='🔄'),
 			st.Page(r'docs_settings/view_delete_files.py', title='🗑️ Просмотр/удаление документов', icon='📄'),
-			st.Page(r'docs_settings/load_knowledge.py', title='Загрузка базы знаний', icon='🗃️'),
+			# st.Page(r'docs_settings/load_knowledge.py', title='Загрузка базы знаний', icon='🗃️'),
 		]		
 	}
 	

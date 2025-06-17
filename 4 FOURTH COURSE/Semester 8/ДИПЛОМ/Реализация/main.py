@@ -36,3 +36,4 @@ if 'files' not in st.session_state:
 
 if 'models' not in st.session_state:
 	st.session_state.models = get_models()
+	st.session_state.models.pop(1)
